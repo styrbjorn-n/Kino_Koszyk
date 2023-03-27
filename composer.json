@@ -1,0 +1,15 @@
+{
+    "name": "alfredunenge/kinokoszyk",
+    "autoload": {
+        "psr-4": {
+            "Alfredunenge\\Kinokoszyk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alun0511",
+            "email": "78014508+alun0511@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
