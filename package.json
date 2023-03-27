@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.2.7"
+  },
+  "scripts": {
+    "build-css": "tailwindcss build -i wp-content/themes/kinokoszyk/src/tailwind.css -o wp-content/themes/kinokoszyk/public/styles.css"
   }
 }
