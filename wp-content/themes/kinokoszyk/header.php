@@ -11,8 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
-<nav class="font-body">
-    asdasd
-</nav>
-<body>
-    
+<body class="font-body">
+
+    <nav>
+        <?php $menuItems = wp_get_nav_menu_items('Kino Header Menu'); ?>
+        <?php if ($menuItems) foreach ($menuItems as $item) : ?>
+            <a title="<?= $item->title; ?>" href="<?= $item->url; ?>">
+                <?= $item->title; ?>
+            <?php endforeach ?>
+    </nav>
