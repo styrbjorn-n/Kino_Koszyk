@@ -54,6 +54,12 @@ function create_posttype()
 }
 add_action('init', 'create_posttype');
 
+/* function add_footer()
+{
+
+}
+add_action('wp_footer()'); */
+
 function print_a($data)
 {
 ?>
