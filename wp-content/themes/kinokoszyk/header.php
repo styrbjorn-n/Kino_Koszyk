@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html class="m-0" <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-body">
+<body class="font-body w-11/12 mx-auto">
 
     <nav>
         <?php $menuItems = wp_get_nav_menu_items('Kino Header Menu'); ?>

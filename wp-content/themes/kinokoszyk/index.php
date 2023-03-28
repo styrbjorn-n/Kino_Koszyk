@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="hero">
-  <h1></h1>
-  <img src="" alt="">
+<div class="hero w-full">
+  <h1>Kino</h1>
+  <img class="w-full aspect-video bg-slate-500 shrink-0" src="" alt="">
 </div>
 <article class="cultural-entrepreneurs">
   <h2></h2>
