@@ -13,7 +13,6 @@
 </head>
 
 <body class="font-body w-11/12 mx-auto">
-<body class="font-body">
     <?php wp_body_open(); ?>
 
     <nav>
