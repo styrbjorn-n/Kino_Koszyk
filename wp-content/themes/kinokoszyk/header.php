@@ -17,19 +17,17 @@
 
     <nav>
         <div class="primary-menu">
-            <?php $primaryMenuItems = wp_get_nav_menu_items('Primary'); ?>
-            <?php if ($primaryMenuItems) foreach ($primaryMenuItems as $item) : ?>
-                <a title="<?= $item->title; ?>" href="<?= $item->url; ?>">
-                    <?= $item->title; ?>
-                <?php endforeach ?>
-        </div>
+            <?php $primaryMenuItems = wp_get_nav_menu_items('Primary');
+            print_menu_items($primaryMenuItems); ?>
 
+        </div>
+        <?php
+        // print_r(get_site_url());
+        ?>
 
         <div class="switching-menu">
-            <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu'); ?>
-            <?php if ($kinoMenuItems) foreach ($kinoMenuItems as $item) : ?>
-                <a title="<?= $item->title; ?>" href="<?= $item->url; ?>">
-                    <?= $item->title; ?>
-                <?php endforeach ?>
+            <?php $currentPageId = get_queried_object_id(); ?>
+            <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
+            print_menu_items($kinoMenuItems); ?>
         </div>
     </nav>
