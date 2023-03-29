@@ -52,30 +52,18 @@
             </div>
 
             <?php
-            // reads in the url and creates a array with urls wich joanna uses 
-            $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-            $joannaUrls = array(
-                'http://kino.local/biography/',
-                'http://kino.local/books/',
-                'http://kino.local/photos/',
-                'http://kino.local/joanna/'
-            );
 
-            if (in_array($url, $joannaUrls)) { // if the url is the same as anny of the joanna urls it shows her menu else it defualts to the kino menu
-                wp_nav_menu(array(
-                    'theme_location' => 'joanna-menu', // pages needed: photos, books, biography and contacts
-                    'container' => false,
-                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
-                    'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
-                ));
+            if (is_joanna_page()) {
+                $menu = 'joanna-menu';
             } else {
-                wp_nav_menu(array(
-                    'theme_location' => 'kino-menu', // pages needed: about, films and contacts 
-                    'container' => false,
-                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
-                    'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
-                ));
+                $menu = 'kino-menu';
             }
+            wp_nav_menu(array(
+                'theme_location' => $menu,
+                'container' => false,
+                'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
+                'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
+            ));
             ?>
         </div>
         <div>

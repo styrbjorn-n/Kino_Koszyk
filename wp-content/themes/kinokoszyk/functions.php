@@ -75,10 +75,28 @@ function load_js()
 add_action('wp_enqueue_scripts', 'load_js');
 
 
-function add_additional_class_on_li($classes, $item, $args) {
-  if(isset($args->add_li_class)) {
-      $classes[] = $args->add_li_class;
+function add_additional_class_on_li($classes, $item, $args)
+{
+  if (isset($args->add_li_class)) {
+    $classes[] = $args->add_li_class;
   }
   return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+// small function to see if current page is one of the pages that should show joannas menu
+function is_joanna_page()
+{
+  $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  $joannaUrls = array(
+    'biography',
+    'books',
+    'photos',
+    'joanna'
+  );
+
+  foreach ($joannaUrls as $page) {
+    if (stripos($url, $page) != false) return true;
+  }
+  return false;
+}
