@@ -18,7 +18,7 @@
     <?php wp_body_open(); ?>
 
     <nav>
-        <div class="primary-menu">
+        <div class="primary-menu hidden">
             <?php $primaryMenuItems = wp_get_nav_menu_items('Primary');
             print_menu_items($primaryMenuItems); ?>
 
@@ -27,26 +27,56 @@
         // print_r(get_site_url());
         ?>
 
-        <div class="switching-menu">
+        <div class="switching-menu hidden">
             <?php $currentPageId = get_queried_object_id(); ?>
             <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
             print_menu_items($kinoMenuItems); ?>
         </div>
     </nav>
 
-    <!-- navbar with burgermenu can change out temp links for the real once,
-     when we have gotten it to write the out properly -->
-    <nav class="burger-menu flex flex-row justify-between items-center flex-nowrap w-full">
+    <!-- a nav solution -->
+    <nav class="burger-menu flex flex-row items-center flex-nowrap w-full justify-between">
         <div>
-            <a href="#">[LOGO]</a>
+            <a href="./index.php">[LOGO]</a>
         </div>
-        <div id="nav-links" class="absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
-        md:z-0 md:h-fit md:static">
-            <ul class="flex flex-col items-center gap-10 h-full justify-around md:gap-1 md:flex-row">
-                <li><a class="hover:text-orange-600" href="#">[placeholder]</a></li>
-                <li><a class="hover:text-orange-600" href="#">[placeholder]</a></li>
-                <li><a class="hover:text-orange-600" href="#">[placeholder]</a></li>
-            </ul>
+        <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
+        md:z-0 md:h-fit md:static md:mt-0 md:flex-row md:justify-between">
+            <div>
+                <!-- writes out the menu items specific to the selected menu -->
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'primary-menu',
+                    'container' => false,
+                    'menu_class' => 'flex flex-row items-center h-full justify-center gap-2 font-bold md:gap-1 md:justify-start md:gap-8',
+                    'add_li_class' => 'hover:text-orange-600 text-xl'
+                )) ?>
+            </div>
+
+            <?php
+            // reads in the url and creates a array with urls wich joanna uses 
+            $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            $joannaUrls = array(
+                'http://kino.local/biography/',
+                'http://kino.local/books/',
+                'http://kino.local/photos/',
+                'http://kino.local/joanna/'
+            );
+
+            if (in_array($url, $joannaUrls)) { // if the url is the same as anny of the joanna urls it shows her menu else it defualts to the kino menu
+                wp_nav_menu(array(
+                    'theme_location' => 'joanna-menu',
+                    'container' => false,
+                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
+                    'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
+                ));
+            } else {
+                wp_nav_menu(array(
+                    'theme_location' => 'kino-menu',
+                    'container' => false,
+                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
+                    'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
+                ));
+            }
+            ?>
         </div>
         <div>
             <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer z-20 relative md:hidden"></ion-icon>
