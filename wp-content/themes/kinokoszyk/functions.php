@@ -63,15 +63,29 @@ function create_posttype()
 {
 
   register_post_type(
-    'movie',
+    'film',
     array(
       'labels' => array(
-        'name' => __('Movies'),
-        'singular_name' => __('Movie'),
+        'name' => __('Films'),
+        'singular_name' => __('Film'),
       ),
       'public' => true,
       'has_archive' => true,
+      'rewrite' => array('slug' => 'films'),
       'menu_icon' => 'dashicons-format-video',
+    )
+  );
+  register_post_type(
+    'book',
+    array(
+      'labels' => array(
+        'name' => __('Books'),
+        'singular_name' => __('Book'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'books'),
+      'menu_icon' => 'dashicons-book',
     )
   );
 }

@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
 
+<?php
+$fields = get_field_objects(); ?>
+
+
 <?php if (have_posts()) : ?>
 
     <?php while (have_posts()) : the_post(); ?>
@@ -9,11 +13,6 @@
 
         <p class="text-xl"> <?php the_content(); ?> </p>
 
-        <div>
-            <img src="<?php the_post_thumbnail('large', array('class' => "object-cover w-50 h-full")); ?>" />
-            <date>
-            </date>
-        </div>
 
     <?php endwhile; ?>
 
