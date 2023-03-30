@@ -88,6 +88,19 @@ function create_posttype()
       'menu_icon' => 'dashicons-book',
     )
   );
+  register_post_type(
+    'photo',
+    array(
+      'labels' => array(
+        'name' => __('Photos'),
+        'singular_name' => __('Photo'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'photos'),
+      'menu_icon' => 'dashicons-images-alt',
+    )
+  );
 }
 add_action('init', 'create_posttype');
 
