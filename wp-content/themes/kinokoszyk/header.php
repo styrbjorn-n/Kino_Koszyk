@@ -10,12 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-    <!-- link to burgr menu icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet"> <!-- link to burgr menu icon -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-body mx-auto">
+<body class="font-heading mx-8">
     <?php wp_body_open(); ?>
 
     <nav>
