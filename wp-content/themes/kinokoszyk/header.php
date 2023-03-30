@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
     <!-- link to burgr menu icon -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-body w-11/12 mx-auto">
+<body class="font-body mx-auto">
     <?php wp_body_open(); ?>
 
     <nav>
@@ -23,12 +24,8 @@
             print_menu_items($primaryMenuItems); ?>
 
         </div>
-        <?php
-        // print_r(get_site_url());
-        ?>
 
         <div class="switching-menu hidden">
-            <?php $currentPageId = get_queried_object_id(); ?>
             <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
             print_menu_items($kinoMenuItems); ?>
         </div>
