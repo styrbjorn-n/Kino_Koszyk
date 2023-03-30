@@ -3,6 +3,29 @@
 add_action('after_setup_theme', function () {
   add_theme_support('menus');
 });
+// Removes unneccessary default post types.
+add_action('wp_dashboard_setup', 'remove_draft_widget', 999);
+
+function remove_draft_widget()
+{
+  remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+}
+//Remove from +New Post in Admin Bar
+add_action('admin_bar_menu', 'remove_default_post_type_menu_bar', 999);
+
+function remove_default_post_type_menu_bar($wp_admin_bar)
+{
+  $wp_admin_bar->remove_node('new-post');
+}
+
+//Remove from the Side Menu
+add_action('admin_menu', 'remove_default_post_type');
+
+function remove_default_post_type()
+{
+  remove_menu_page('edit.php');
+}
+
 
 //I made a lil' function to tidy up the header. Shout if you want it gone.
 function print_menu_items($menu)
@@ -40,25 +63,21 @@ function create_posttype()
 {
 
   register_post_type(
-    'movies',
+    'movie',
     array(
       'labels' => array(
         'name' => __('Movies'),
-        'singular_name' => __('Movie')
+        'singular_name' => __('Movie'),
       ),
       'public' => true,
       'has_archive' => true,
-
+      'menu_icon' => 'dashicons-format-video',
     )
   );
 }
 add_action('init', 'create_posttype');
 
-/* function add_footer()
-{
 
-}
-add_action('wp_footer()'); */
 
 function print_a($data)
 {
