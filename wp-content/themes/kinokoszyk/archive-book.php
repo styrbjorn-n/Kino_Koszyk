@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
 <?php if (have_posts()) : ?>
+    <?php the_title(); ?>
     <div>
         <!-- This is a card in the grid -->
         <?php while (have_posts()) : the_post(); ?>

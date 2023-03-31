@@ -1,8 +1,8 @@
 <?php wp_footer(); ?>
 
-<footer class="h-footer bg-black py-24 pl-16">
+<footer class="text-white h-footer bg-black py-24 pl-16">
     <div class="flex">
-        <img src="<?= get_template_directory_uri(); ?>/logo.svg" alt="Kinokoszyk Logo" class="w-[212px] h-[111px] mr-36" />
+        <img src="<?= get_template_directory_uri(); ?>/src/logowhite.svg" alt="Kinokoszyk Logo" class="w-[212px] h-[111px] mr-36" />
         <div class="text-white font-text font-normal flex flex-col">
             <p class="mb-2">Kino Koszyk HB</p>
             <p>kino.koszyk@gmail.com</p>

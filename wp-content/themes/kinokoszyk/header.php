@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="m-0" <?php language_attributes(); ?>>
+<html class="m-0 text-primary bg-[#FEFEFE]" <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 
-    <link rel="shortcut icon" href="/" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/src/logoblack.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -24,7 +24,6 @@
                 print_menu_items($primaryMenuItems); ?>
 
             </div>
-
             <div class="switching-menu hidden">
                 <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
                 print_menu_items($kinoMenuItems); ?>
@@ -34,7 +33,7 @@
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full justify-between">
             <div>
-                <a href="./index.php">[LOGO]</a>
+                <a href="http://kino.local"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 mr-12"></a>
             </div>
             <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
         md:z-0 md:h-fit md:static md:mt-0 md:flex-row md:justify-between">

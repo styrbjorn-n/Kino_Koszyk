@@ -4,8 +4,8 @@
 <section class="font-heading mx-[120px]">
 
     <div class="w-full">
-        <h1 id="hero-title" class="text-5xl relative font-bold h-fit
-      after:content-['Koszyk'] after:absolute after:left-8 after:top-12 after:text-gray-500
+        <h1 id="hero-title" class="relative font-black h-fit text-desktopH1
+      after:content-['Koszyk'] after:absolute color-grayshade after:left-10 after:top-20
       "> Kino</h1>
         <img class="w-full aspect-video bg-gray-400 shrink-0" src="" alt="">
     </div>
@@ -13,25 +13,29 @@
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="flex flex-col basis-3/5 mr-8"><?php the_content(); ?></div>
-                <img class="w-full h-auto bg-gray-400 basis-2/5" src="" alt="">
+                <img class="w-full self-start basis-2/5" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="">
 
             <?php endwhile; ?>
         <?php endif; ?>
     </article>
-    <article class="link-wrapper w-full h-40 flex flex-wrap mt-8">
-        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image1.svg" alt=""></a>
-        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image2.svg" alt=""></a>
-        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image3.svg" alt=""></a>
-        <a class="w-1/2 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image4.svg" alt=""></a>
-        <a class="w-1/2 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image5.svg" alt=""></a>
+    <article class="link-wrapper w-full h-40 flex flex-wrap mt-8 mb-16">
+        <h2 class="w-full h-1/3 text-desktopH2 font-semibold mb-8">Our collaborations</h2>
+        <a class="w-1/3 h-1/3" href=""><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image1.svg" alt=""></a>
+        <a class="w-1/3 h-1/3" href=""><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image2.svg" alt=""></a>
+        <a class="w-1/3 h-1/3" href=""><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image3.svg" alt=""></a>
+        <a class="w-1/2 h-1/3" href=""><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image4.svg" alt=""></a>
+        <a class="w-1/2 h-1/3" href=""><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image5.svg" alt=""></a>
     </article>
-    <section>
-        <h3 class="text-2xl font-bold">Joanna Helander</h3>
-        <div class="facebook-wrapper w-full aspect-square bg-gray-400"></div>
-    </section>
-    <section>
-        <h3 class="text-2xl font-bold">Bo persson</h3>
-        <div class="facebook-wrapper w-full aspect-square bg-gray-400"></div>
+    <section class="flex">
+        <section class="basis-1/2 ">
+            <h2 class="text-desktopH2 font-semibold">Joanna Helander</h2>
+            <div class="facebook-wrapper w-full aspect-square bg-gray-400"></div>
+        </section>
+        <section class="basis-1/2 ">
+            <h2 class="text-desktopH2 font-semibold">Bo Persson</h2>
+            <div class="facebook-wrapper w-full aspect-square bg-gray-400"></div>
+        </section>
+
     </section>
 </section>
 <?php get_footer(); ?>

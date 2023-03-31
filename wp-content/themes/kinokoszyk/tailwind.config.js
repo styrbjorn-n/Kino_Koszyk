@@ -16,5 +16,11 @@ tailwind.config = {
         desktopP: ['24px', '150%']
       }
     },
+    textColor: {
+      'primary': '#333333',
+      'secondary': '#C4C4C4',
+      'grayshade': '#8F8989',
+      'hover': '#FE4E30',
+    }
   },
 };
