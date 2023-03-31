@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
 
-<section class="w-11/12 mx-auto">
+<section class="font-heading mx-[120px]">
 
-    <div class="hero w-full">
+    <div class="w-full">
         <h1 id="hero-title" class="text-5xl relative font-bold h-fit
       after:content-['Koszyk'] after:absolute after:left-8 after:top-12 after:text-gray-500
       "> Kino</h1>
         <img class="w-full aspect-video bg-gray-400 shrink-0" src="" alt="">
     </div>
-    <article class="cultural-entrepreneurs mt-16 flex flex-row h-96">
+    <article class="mt-16 flex flex-row h-96">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="flex flex-col basis-3/5 mr-8"><?php the_content(); ?></div>
@@ -19,11 +19,11 @@
         <?php endif; ?>
     </article>
     <article class="link-wrapper w-full h-40 flex flex-wrap mt-8">
-        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="./foton/svg-icons/image1.svg" alt=""></a>
-        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="./foton/svg-icons/image1.svg" alt=""></a>
-        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="./foton/svg-icons/image1.svg" alt=""></a>
-        <a class="w-1/2 h-1/2" href=""><img class="border-2 w-full h-full" src="./foton/svg-icons/image1.svg" alt=""></a>
-        <a class="w-1/2 h-1/2" href=""><img class="border-2 w-full h-full" src="./foton/svg-icons/image1.svg" alt=""></a>
+        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image1.svg" alt=""></a>
+        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image2.svg" alt=""></a>
+        <a class="w-1/3 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image3.svg" alt=""></a>
+        <a class="w-1/2 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image4.svg" alt=""></a>
+        <a class="w-1/2 h-1/2" href=""><img class="border-2 w-full h-full" src="<?= get_template_directory_uri(); ?>./foton/svg-icons/image5.svg" alt=""></a>
     </article>
     <section>
         <h3 class="text-2xl font-bold">Joanna Helander</h3>

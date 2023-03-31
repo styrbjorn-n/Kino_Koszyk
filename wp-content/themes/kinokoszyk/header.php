@@ -14,55 +14,57 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-heading mx-8">
-    <?php wp_body_open(); ?>
+<body class="">
+    <header class="font-heading mb-16 mx-8 py-6">
+        <?php wp_body_open(); ?>
 
-    <nav>
-        <div class="primary-menu hidden">
-            <?php $primaryMenuItems = wp_get_nav_menu_items('Primary');
-            print_menu_items($primaryMenuItems); ?>
+        <nav>
+            <div class="primary-menu hidden">
+                <?php $primaryMenuItems = wp_get_nav_menu_items('Primary');
+                print_menu_items($primaryMenuItems); ?>
 
-        </div>
-
-        <div class="switching-menu hidden">
-            <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
-            print_menu_items($kinoMenuItems); ?>
-        </div>
-    </nav>
-
-    <!-- a nav solution -->
-    <nav class="burger-menu flex flex-row items-center flex-nowrap w-full justify-between">
-        <div>
-            <a href="./index.php">[LOGO]</a>
-        </div>
-        <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
-        md:z-0 md:h-fit md:static md:mt-0 md:flex-row md:justify-between">
-            <div>
-                <!-- writes out the menu items specific to the selected menu -->
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
-                    'container' => false,
-                    'menu_class' => 'flex flex-row items-center h-full justify-center gap-2 font-bold md:gap-1 md:justify-start md:gap-8',
-                    'add_li_class' => 'hover:text-orange-600 text-xl'
-                )) ?>
             </div>
 
-            <?php
+            <div class="switching-menu hidden">
+                <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
+                print_menu_items($kinoMenuItems); ?>
+            </div>
+        </nav>
 
-            if (is_joanna_page()) {
-                $menu = 'joanna-menu';
-            } else {
-                $menu = 'kino-menu';
-            }
-            wp_nav_menu(array(
-                'theme_location' => $menu,
-                'container' => false,
-                'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
-                'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
-            ));
-            ?>
-        </div>
-        <div>
-            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer z-20 relative md:hidden"></ion-icon>
-        </div>
-    </nav>
+        <!-- a nav solution -->
+        <nav class="burger-menu flex flex-row items-center flex-nowrap w-full justify-between">
+            <div>
+                <a href="./index.php">[LOGO]</a>
+            </div>
+            <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
+        md:z-0 md:h-fit md:static md:mt-0 md:flex-row md:justify-between">
+                <div>
+                    <!-- writes out the menu items specific to the selected menu -->
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
+                        'container' => false,
+                        'menu_class' => 'flex flex-row items-center h-full justify-center gap-2 font-bold md:gap-1 md:justify-start md:gap-8',
+                        'add_li_class' => 'hover:text-orange-600 text-xl'
+                    )) ?>
+                </div>
+
+                <?php
+
+                if (is_joanna_page()) {
+                    $menu = 'joanna-menu';
+                } else {
+                    $menu = 'kino-menu';
+                }
+                wp_nav_menu(array(
+                    'theme_location' => $menu,
+                    'container' => false,
+                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
+                    'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
+                ));
+                ?>
+            </div>
+            <div>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer z-20 relative md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
