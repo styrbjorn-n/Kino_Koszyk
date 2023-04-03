@@ -33,7 +33,7 @@
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full justify-between">
             <div>
-                <a href="http://kino.local"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 mr-12"></a>
+                <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 mr-12"></a>
             </div>
             <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
         md:z-0 md:h-fit md:static md:mt-0 md:flex-row md:justify-between">

@@ -105,15 +105,6 @@ function create_posttype()
 add_action('init', 'create_posttype');
 
 
-
-function print_a($data)
-{
-?>
-  <pre class="block p-6 m-6 border border-brown rounded-xl text-xs overflow-hidden"><code><?php print_r($data); ?></code></pre>
-<?php
-
-}
-
 function load_js()
 {
   wp_enqueue_script('burger-script', './wp-content/themes/kinokoszyk/burger-script.js');
