@@ -146,3 +146,12 @@ function is_joanna_page()
   }
   return false;
 }
+
+function wpdocs_remove_menues()
+{
+  remove_menu_page('edit.php');
+  remove_menu_page('upload.php');
+  remove_menu_page('edit-comments.php');
+}
+
+add_action('admin_menu', 'wpdocs_remove_menues');
