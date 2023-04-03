@@ -64,7 +64,7 @@
                 ));
                 ?>
             </div>
-            <div class="w-fit h-[30px] lg:hidden">
+            <div class="w-[30px] h-[30px] lg:hidden">
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer z-20 relative"></ion-icon>
             </div>
         </nav>
