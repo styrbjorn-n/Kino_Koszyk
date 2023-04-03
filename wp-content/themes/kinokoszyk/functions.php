@@ -108,6 +108,7 @@ add_action('init', 'create_posttype');
 function load_js()
 {
   wp_enqueue_script('burger-script', './wp-content/themes/kinokoszyk/burger-script.js');
+  wp_enqueue_script('header_location_script', './wp-content/themes/kinokoszyk/header-location.js');
 }
 add_action('wp_enqueue_scripts', 'load_js');
 
