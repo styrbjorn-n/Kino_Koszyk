@@ -33,7 +33,7 @@
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full lg:justify-between">
             <div class="flex flex-nowrap lg:gap-8 w-full">
                 <div>
-                    <a href="http://kino.local"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
+                    <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
                 </div>
                 <div class="w-full lg:w-fit z-20 lg:z-0 justify-self-stretch">
                     <!-- writes out the menu items specific to the selected menu -->
