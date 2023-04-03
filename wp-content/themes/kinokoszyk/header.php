@@ -43,7 +43,7 @@
                         'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
                         'container' => false,
                         'menu_class' => 'flex flex-row items-center h-full justify-center gap-2 font-bold md:gap-1 md:justify-start md:gap-8',
-                        'add_li_class' => 'hover:text-orange-600 text-xl'
+                        'add_li_class' => 'hover:text-hover text-xl'
                     )) ?>
                 </div>
 
@@ -58,7 +58,7 @@
                     'theme_location' => $menu,
                     'container' => false,
                     'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold md:gap-1 md:flex-row md:justify-end md:gap-8',
-                    'add_li_class' => 'hover:text-orange-600 text-3xl md:text-xl'
+                    'add_li_class' => 'hover:text-hover text-3xl md:text-xl'
                 ));
                 ?>
             </div>
