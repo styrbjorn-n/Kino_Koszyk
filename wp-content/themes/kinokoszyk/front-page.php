@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v16.0" nonce="l6ftm9fT"></script>
 
 
 <section class="font-heading md:mx-[120px] mx-2">
@@ -28,11 +30,15 @@
     <section class="flex flex-wrap md:flex-nowrap md:gap-4">
         <section class="w-full md:basis-1/2 shrink-0">
             <h2 class="text-desktopH2 font-semibold">Joanna Helander</h2>
-            <div class="facebook-wrapper w-full aspect-square bg-gray-400"></div>
+            <div class="fb-page facebook-wrapper w-full aspect-square basis-1/2" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="540" data-height="540" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/kinokoszyk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kinokoszyk/">Kino Koszyk - Joanna Helander &amp; Bo Persson</a></blockquote>
+            </div>
         </section>
         <section class="w-full md:basis-1/2 shrink-0">
             <h2 class="text-desktopH2 font-semibold">Bo Persson</h2>
-            <div class="facebook-wrapper w-full aspect-square bg-gray-400"></div>
+            <div class="fb-page facebook-wrapper w-full aspect-square basis-1/2 width:540 height: 492" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="540" data-height="540" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/kinokoszyk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kinokoszyk/">Kino Koszyk - Joanna Helander &amp; Bo Persson</a></blockquote>
+            </div>
         </section>
 
     </section>
