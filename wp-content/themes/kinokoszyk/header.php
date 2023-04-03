@@ -15,9 +15,8 @@
 </head>
 
 <body class="">
-    <header class="font-heading mb-16 mx-8 py-6">
+    <header class="font-heading mb-16 mx-2 py-6">
         <?php wp_body_open(); ?>
-
         <nav>
             <div class="primary-menu hidden">
                 <?php $primaryMenuItems = wp_get_nav_menu_items('Primary');
@@ -33,19 +32,20 @@
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full justify-between">
             <div>
-                <a href="http://kino.local"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 mr-12"></a>
+                <a href="http://kino.local"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
+            </div>
+            <div class="w-fit z-20">
+                <!-- writes out the menu items specific to the selected menu -->
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
+                    'container' => false,
+                    'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center gap-2 font-bold md:gap-1 md:justify-start md:gap-8',
+                    'add_li_class' => 'hover:text-hover text-xl'
+                )) ?>
+
             </div>
             <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
         md:z-0 md:h-fit md:static md:mt-0 md:flex-row md:justify-between">
-                <div>
-                    <!-- writes out the menu items specific to the selected menu -->
-                    <?php wp_nav_menu(array(
-                        'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
-                        'container' => false,
-                        'menu_class' => 'flex flex-row items-center h-full justify-center gap-2 font-bold md:gap-1 md:justify-start md:gap-8',
-                        'add_li_class' => 'hover:text-hover text-xl'
-                    )) ?>
-                </div>
 
                 <?php
 
@@ -62,7 +62,7 @@
                 ));
                 ?>
             </div>
-            <div>
+            <div class="w-fit h-[30px]">
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer z-20 relative md:hidden"></ion-icon>
             </div>
         </nav>
