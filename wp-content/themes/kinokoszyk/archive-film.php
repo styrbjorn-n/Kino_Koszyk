@@ -3,7 +3,7 @@
 <?php if (have_posts()) : ?>
 
 
-    <div class="w-full flex flex-wrap justify-evenly lg:gap-8">
+    <div class="w-full flex flex-wrap justify-evenly p-2 lg:gap-8">
         <!-- This is a card in the grid -->
         <?php while (have_posts()) : the_post(); ?>
 
@@ -23,11 +23,11 @@
                 $width = $image['sizes'][$size . '-width'];
                 $height = $image['sizes'][$size . '-height'];
             ?>
-                <div class="flex flex-col lg:w-1/4 w-">
+                <div class="flex flex-col lg:w-1/4 w-1/2 pr-2">
                     <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
                         <img class="object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                     </a>
-                    <a class="whitespace-break-spaces" href=<?php the_permalink() ?>> <?= the_title(); ?> </a>
+                    <a class="whitespace-break-spaces text-desktopP" href=<?php the_permalink() ?>> <?= the_title(); ?> </a>
                 </div>
 
             <?php endif; ?>
