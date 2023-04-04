@@ -40,6 +40,9 @@ tailwind.config = {
           'grayshade': '#8F8989',
           'hover': '#FE4E30',
     },
+    colors: {
+      'lightgrey':'#E2E2E2'
+    }
     }
   },
 };
