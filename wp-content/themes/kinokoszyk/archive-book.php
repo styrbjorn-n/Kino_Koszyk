@@ -22,6 +22,8 @@
                 $width = $image['sizes'][$size . '-width'];
                 $height = $image['sizes'][$size . '-height'];
             ?>
+
+                <!-- What's being showed -->
                 <div class="flex flex-col w-1/2 pr-2 lg:w-1/4">
                     <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
                         <img class="object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
