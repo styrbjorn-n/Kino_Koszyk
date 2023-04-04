@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<h1 class="font-heading text-desktopH1 uppercase margin-4">Books</h1>
+
 <?php if (have_posts()) : ?>
 
     <div class="w-full flex flex-wrap justify-evenly pl-2 lg:gap-8">
@@ -29,8 +31,7 @@
                         <img class="object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                     </a>
                     <a class="font-bold text-mobileP lg:text-desktopP md:text-tabletP" href=<?php the_permalink() ?>> <?= the_title(); ?></a>
-                    <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
-                    <p class="text-mobileP lg:text-desktopP md:text-tabletP">ISBN: <?= get_field('isbn'); ?></p>
+                    <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'), " - ", get_field('publisher'); ?></p>
                 </div>
 
             <?php endif; ?>
