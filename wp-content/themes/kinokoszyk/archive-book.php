@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1 class="font-heading text-desktopH1 uppercase margin-4">Books</h1>
+<h1 class="font-heading text-desktopH1 mb-16">Books</h1>
 
 <?php if (have_posts()) : ?>
 
