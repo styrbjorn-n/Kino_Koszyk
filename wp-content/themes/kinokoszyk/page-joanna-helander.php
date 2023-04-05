@@ -6,14 +6,14 @@
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
 
     <div class="w-full">
-        <h1 id="hero-title" class="text-desktopH1 font-black relative z-1 -mb-[11px]"> KINO
-            <span class="text-grayshade">KOSZYK</span>
+        <h1 id="hero-title" class="relative text-black h-fit text-5xl lg:text-9xl"> Joanna
+            <span class="ml-5 lg:absolute text-gray-600 lg:left-10 lg:top-[7rem]">Helander</span>
         </h1>
-        <img class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/hero.jpg" alt="">
+        <img class="w-full aspect-video bg-gray-400 shrink-0" src="" alt="">
     </div>
     <article class="mt-16 h-fit flex flex-col md:flex-row md:gap-4">
         <div>
-            <h2 class="text-xl font-semibold mb-3 md:text-4xl">Experienced film pioneers making timeless documentaries.</h2>
+            <h2 class="text-xl font-semibold mb-3 md:text-4xl">Cultural entrepreneurs</h2>
             <p class="text-base md:text-xl"><?php the_field('front_page_description'); ?></p>
         </div>
         <img class="mt-3 w-full self-start md:w-1/2" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="">
