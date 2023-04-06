@@ -25,7 +25,9 @@
             </div>
             <div class="switching-menu hidden">
                 <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
-                print_menu_items($kinoMenuItems); ?>
+                print_menu_items($kinoMenuItems);
+                // preg_replace(" ", "|", $kinoMenuItems); 
+                ?>
             </div>
         </nav>
 
@@ -35,13 +37,14 @@
                 <div>
                     <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
                 </div>
-                <div class="w-full lg:w-fit z-20 lg:z-0 justify-self-stretch">
+                <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch">
                     <!-- writes out the menu items specific to the selected menu -->
                     <?php wp_nav_menu(array(
                         'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
                         'container' => false,
-                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center gap-2 font-bold lg:gap-1 lg:justify-start lg:gap-8',
-                        'add_li_class' => 'hover:text-hover text-xl'
+                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                        'add_li_class' => 'hover:text-hover text-xl',
+                        'after' => '<span class="mx-[12px] text-primary"> | </span>'
                     )) ?>
 
                 </div>
