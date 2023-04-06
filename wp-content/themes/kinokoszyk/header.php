@@ -66,7 +66,7 @@
                 ));
                 ?>
             </div>
-            <div onclick="onToggleMenu(this)" class="w-[30px] h-[30px] lg:hidden z-20 lg:z-0">
+            <div onclick="onToggleMenu(this)" class="w-[30px] h-[30px] cursor-pointer lg:hidden z-20 lg:z-0">
                 <div id="line-container" class="w-full h-full space-y-2">
                     <div class="w-full h-0.5 bg-gray-600"></div>
                     <div class="w-full h-0.5 bg-gray-600"></div>
