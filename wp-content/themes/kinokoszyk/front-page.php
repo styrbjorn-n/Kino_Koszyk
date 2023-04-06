@@ -6,9 +6,7 @@
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
 
     <div class="w-full">
-        <h1 id="hero-title" class="text-desktopH1 font-black relative z-1 -mb-[11px]"> KINO
-            <span class="text-grayshade">KOSZYK</span>
-        </h1>
+        <h1 id="hero-title" class="text-desktopH1 font-black relative z-1 -mb-[11px]"> KINO KOSZYK </h1>
         <img class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/hero.jpg" alt="">
     </div>
     <article class="mt-16 h-fit flex flex-col md:flex-row md:gap-4">

@@ -25,7 +25,6 @@
             <div class="switching-menu hidden">
                 <?php $kinoMenuItems = wp_get_nav_menu_items('Kino Header Menu');
                 print_menu_items($kinoMenuItems);
-                // preg_replace(" ", "|", $kinoMenuItems); 
                 ?>
             </div>
         </nav>
@@ -74,4 +73,5 @@
                 </div>
             </div>
         </nav>
+        <?php the_breadcrumb(); ?>
     </header>
