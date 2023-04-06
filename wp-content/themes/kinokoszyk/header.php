@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet"> <!-- link to burgr menu icon -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
 <body class="">
@@ -67,8 +66,12 @@
                 ));
                 ?>
             </div>
-            <div class="w-[30px] h-[30px] lg:hidden">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer z-20 relative"></ion-icon>
+            <div onclick="onToggleMenu(this)" class="w-[30px] h-[30px] lg:hidden z-20 lg:z-0">
+                <div id="line-container" class="w-full h-full space-y-2">
+                    <div class="w-full h-0.5 bg-gray-600"></div>
+                    <div class="w-full h-0.5 bg-gray-600"></div>
+                    <div class="w-full h-0.5 bg-gray-600"></div>
+                </div>
             </div>
         </nav>
     </header>
