@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet"> <!-- link to burgr menu icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body class="">
+<body class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <header class="font-heading mb-16 mx-6 py-6">
         <?php wp_body_open(); ?>
         <nav>
@@ -60,7 +60,7 @@
                 wp_nav_menu(array(
                     'theme_location' => $menu,
                     'container' => false,
-                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
+                    'menu_class' => 'nav-menu-list flex flex-col items-center h-full justify-evenly font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
                     'add_li_class' => 'hover:text-hover text-3xl md:text-xl'
                 ));
                 ?>
