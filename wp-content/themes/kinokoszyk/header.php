@@ -60,7 +60,7 @@
                 wp_nav_menu(array(
                     'theme_location' => $menu,
                     'container' => false,
-                    'menu_class' => 'flex flex-col items-center h-full justify-evenly font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
+                    'menu_class' => 'nav-menu-list flex flex-col items-center h-full justify-evenly font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
                     'add_li_class' => 'hover:text-hover text-3xl md:text-xl'
                 ));
                 ?>
