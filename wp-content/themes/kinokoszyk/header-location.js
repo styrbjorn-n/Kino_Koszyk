@@ -28,7 +28,7 @@ function navMenuList(joannaPages, kinoPages, URL) {
 
 setTimeout(() => {
   const joannaPages = ['biography', 'book', 'photos', 'contact', 'joanna'];
-  const kinoPages = ['about', 'fims', 'contact'];
+  const kinoPages = ['about', 'films', 'contact'];
   let URL = window.location.href;
   primaryMenuList(joannaPages, URL);
   navMenuList(joannaPages, kinoPages, URL);
