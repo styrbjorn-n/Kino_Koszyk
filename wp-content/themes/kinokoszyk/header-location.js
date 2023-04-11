@@ -14,7 +14,7 @@ function navMenuList(joannaPages, kinoPages, URL) {
   const children = document.querySelector('.nav-menu-list').children;
 
   for (let i = 0; i < joannaPages.length; i++) {
-    if (URL.includes(joannaPages[i]) && i > 4) {
+    if (URL.includes(joannaPages[i]) && i < 4) {
       children[i].classList.add('text-red-600');
       return;
     }
@@ -27,7 +27,7 @@ function navMenuList(joannaPages, kinoPages, URL) {
 }
 
 setTimeout(() => {
-  const joannaPages = ['biography', 'book', 'photos', 'contact', 'joanna'];
+  const joannaPages = ['biography', 'books', 'photos', 'contact', 'joanna'];
   const kinoPages = ['about', 'films', 'contact'];
   let URL = window.location.href;
   primaryMenuList(joannaPages, URL);

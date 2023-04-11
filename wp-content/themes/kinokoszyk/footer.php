@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 
-<footer class="h-footer text-white bg-black py-24 px-5 md:pl-16 mt-16">
+<footer class="h-footer text-white mx-[-0.5rem] md:mx-[-4rem] lg:mx-[-120px] bg-black py-24 px-5 md:pl-16 mt-16">
     <div class="flex gap-10 md:gap-36">
         <img src="<?= get_template_directory_uri(); ?>/src/logowhite.svg" alt="Kinokoszyk Logo" class="w-28 md:w-52" />
         <div class="font-normal flex flex-col">
