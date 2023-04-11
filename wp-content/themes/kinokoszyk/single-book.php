@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-
+<div class="breadcrumbs uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if (function_exists('bcn_display')) {
+        bcn_display();
+    } ?>
+</div>
 <?php
 $fields = get_field_objects(); ?>
 
@@ -8,6 +12,8 @@ $fields = get_field_objects(); ?>
 <?php if (have_posts()) : ?>
 
     <?php while (have_posts()) : the_post(); ?>
+
+        <!-- <?php the_breadcrumb() ?> -->
 
         <h2 class="text-4xl"><?php the_title(); ?></h2>
 

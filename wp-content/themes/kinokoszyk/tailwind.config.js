@@ -41,6 +41,7 @@ tailwind.config = {
           'hover': '#FE4E30',
     },
     colors: {
+      'grey': '#818181',
       'lightgrey':'#E2E2E2',
       'buttonRed': '#CA0000'
     }

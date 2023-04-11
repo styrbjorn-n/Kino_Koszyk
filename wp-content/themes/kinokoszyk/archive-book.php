@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
-<h1 class="font-heading text-desktopH1 mb-16">Books</h1>
-
+<div class="breadcrumbs uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if (function_exists('bcn_display')) {
+        bcn_display();
+    } ?>
+</div>
+<h1 class="font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1">FILMS</h1>
 <?php if (have_posts()) : ?>
 
     <div class="w-full flex flex-wrap justify-evenly pl-2 lg:gap-8">

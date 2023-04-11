@@ -1,5 +1,10 @@
 <?php get_header(); ?>
-
+<div class="breadcrumbs uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if (function_exists('bcn_display')) {
+        bcn_display();
+    } ?>
+</div>
+<h1 class="font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1">FILMS</h1>
 <?php if (have_posts()) : ?>
     <div>
         <!-- This is a card in the grid -->

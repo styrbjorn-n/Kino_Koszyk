@@ -150,9 +150,11 @@ add_action('admin_menu', 'wpdocs_remove_menues');
 
 
 //Breadcrumbs
+
+
+
 function the_breadcrumb()
 {
-
   $sep = ' | ';
 
   if (!is_front_page()) {
@@ -161,43 +163,65 @@ function the_breadcrumb()
     echo '<a href="';
     echo get_option('home');
     echo '">';
-    bloginfo('name');
+    echo "HOME";
     echo '</a>' . $sep;
 
-    if (is_category() || is_single()) {
-      the_category('title_li=');
-    } elseif (is_archive() || is_single()) {
-      if (is_day()) {
-        printf(__('%s', 'text_domain'), get_the_date());
-      } elseif (is_month()) {
-        printf(__('%s', 'text_domain'), get_the_date(_x('F Y', 'monthly archives date format', 'text_domain')));
-      } elseif (is_year()) {
-        printf(__('%s', 'text_domain'), get_the_date(_x('Y', 'yearly archives date format', 'text_domain')));
-      } else {
-        _e('Films Archives', 'text_domain');
-      }
+    if (is_archive() || is_single()) {
+      // _e('Films Archives', 'text_domain');
+      get_the_archive_description();
+      echo $sep;
     }
 
-    if (is_single()) {
-      echo $sep;
-      the_title();
-    }
+    // if (is_single()) {
+    //   the_title();
+    // }
 
     if (is_page()) {
       echo the_title();
     }
 
-    if (is_home()) {
-      global $post;
-      $page_for_posts_id = get_option('page_for_posts');
-      if ($page_for_posts_id) {
-        $post = get_post($page_for_posts_id);
-        setup_postdata($post);
-        the_title();
-        rewind_posts();
-      }
-    }
+    // if (is_home()) {
+    //   global $post;
+    //   $page_for_posts_id = get_option('page_for_posts');
+    //   if ($page_for_posts_id) {
+    //     $post = get_post($page_for_posts_id);
+    //     setup_postdata($post);
+    //     the_title();
+    //     rewind_posts();
+    //   }
+    // }
 
     echo '</div>';
   }
 }
+
+
+// function the_breadcrumb()
+// {
+
+//   $show_on_homepage = 0;
+//   $show_current = 1;
+//   $delimiter = '|';
+//   $home_url = 'HOME';
+//   $before_wrap = '<span clas="current">';
+//   $after_wrap = '</span>';
+
+//   global $post;
+//   $home_url = get_bloginfo('url');
+
+//   /* Check for homepage first! */
+//   if (is_home() || is_front_page() || is_joanna_page()) {
+//     $on_homepage = 1;
+//   }
+//   if (0 === $show_on_homepage && 1 === $on_homepage) return;
+
+//   /* Proceed with showing the breadcrumbs */
+//   $breadcrumbs = '<ol id="crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
+
+//   $breadcrumbs .= '<li itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a target="_blank" href="' . $home_url . '">' . $home_url . '</a></li>';
+
+//   /* Build breadcrumbs here */
+
+//   $breadcrumbs .= '</ol>' . $home_url . $delimiter;
+//   echo $breadcrumbs;
+// }
