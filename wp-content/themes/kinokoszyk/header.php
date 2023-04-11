@@ -73,5 +73,5 @@
                 </div>
             </div>
         </nav>
-        <?php the_breadcrumb(); ?>
+
     </header>
