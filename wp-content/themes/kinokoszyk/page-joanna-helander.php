@@ -27,7 +27,7 @@
     </article>
     <section>
         <h3 class="text-desktopH3 font-text font-light mb-4">Check out updates at our facebook!</h3>
-        <div class="flex flex-wrap justify-center md:flex-nowrap md:gap-4 lg:justify-around">
+        <div class="flex flex-wrap justify-center md:flex-nowrap md:gap-4 lg:justify-start">
             <section class="w-full md:w-1/2 lg:w-[500px] shrink-1 md:shrink-0">
                 <h2 class="text-3xl md:text-4xl lg:text-desktopH2 font-semibold">Joanna Helander</h2>
                 <div class="fb-page facebook-wrapper w-full aspect-square" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="1000" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
