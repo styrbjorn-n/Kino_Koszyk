@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <section>
-    <h1 class="lg:text-desktopH1 lg:mb-16">Photos</h1>
-    <div class="flex justify-between w-fit gap-1 lg:mb-16">
-        <h3 class="">All <span class="">|</span></h3>
-        <h3 class="">Portraits <span class="">|</span></h3>
-        <h3 class="">Writers <span class="">|</span></h3>
+    <h1 class="lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16">Photos</h1>
+    <div class="flex justify-between w-fit gap-1 mb-4 md:mb-16">
+        <h3 class="">All <span>|</span></h3>
+        <h3 class="">Portraits <span>|</span></h3>
+        <h3 class="">Writers <span>|</span></h3>
         <h3 class="">Artists </h3>
     </div>
     <?php if (have_posts()) : ?>
-        <div class="flex justify-between">
+        <div class="flex flex-wrap justify-between w-full">
             <!-- This is a card in the grid -->
             <?php while (have_posts()) : the_post(); ?>
 
@@ -28,7 +28,7 @@
                     $width = $image['sizes'][$size . '-width'];
                     $height = $image['sizes'][$size . '-height'];
                 ?>
-                    <div class="card flex flex-col w-1/2 pr-2 lg:w-1/4">
+                    <div class="card flex flex-col w-[49%] lg:w-1/4 shrink-0 mb-3 md:mb-20">
                         <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
                             <img class="object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                         </a>
