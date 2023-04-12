@@ -27,7 +27,7 @@ function navMenuList(joannaPages, kinoPages, URL) {
 }
 
 setTimeout(() => {
-  const joannaPages = ['biography', 'books', 'photos', 'contact', 'joanna'];
+  const joannaPages = ['biography', 'books', 'photos', 'joanna-helander/contact', 'joanna'];
   const kinoPages = ['about', 'films', 'contact'];
   let URL = window.location.href;
   primaryMenuList(joannaPages, URL);
