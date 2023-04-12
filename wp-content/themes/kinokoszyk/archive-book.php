@@ -5,7 +5,7 @@
         bcn_display();
     } ?>
 </div>
-<h1 class="font-black mx-2 md:mx-16 lg:mx-[120px] font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1"><?php post_type_archive_title() ?></h1>
+<h1 class="font-black mb-16 mx-2 md:mx-16 font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1"><?php post_type_archive_title() ?></h1>
 <?php if (have_posts()) : ?>
 
     <div class="w-full flex flex-wrap justify-evenly pl-2 lg:gap-8">
@@ -35,7 +35,7 @@
                         <img class="object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                     </a>
                     <a class="font-bold text-mobileP lg:text-desktopP md:text-tabletP" href=<?php the_permalink() ?>> <?= the_title(); ?></a>
-                    <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'), " - ", get_field('publisher'); ?></p>
+                    <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
                 </div>
 
             <?php endif; ?>

@@ -5,23 +5,41 @@
         bcn_display();
     } ?>
 </div>
-<?php
-$fields = get_field_objects(); ?>
 
+<section class="mx-2 md:mx-16 lg:mx-[120px]">
 
-<?php if (have_posts()) : ?>
+    <h1 class="font-black font-heading lg:mb-16 text-mobileH1 lg:text-desktopH1 md:text-tabletH1">Books</h1>
 
-    <?php while (have_posts()) : the_post(); ?>
+    <section class="flex flex-row justify-between ">
+        <div class="basis-1/2 max-w-[490px] text-desktopP font-text">
 
-        <!-- <?php the_breadcrumb() ?> -->
+            <h4 class="font-header text-desktopH4"><?php the_title(); ?></h4>
+            <p><?php the_field('year'); ?></p>
+            <p><?php the_field('available_languages'); ?></p>
+            <p><?php the_field('writer'); ?></p>
 
-        <h2 class="text-4xl"><?php the_title(); ?></h2>
+            <p class="mt-8"><?php the_field('publisher'); ?></p>
+            <p class="inline">ISBN: </p>
+            <p class="inline font-bold"> <?php the_field('isbn'); ?></p>
 
-        <p class="text-xl"> <?php the_content(); ?> </p>
+            <p class="mt-16"><?php the_field('book_description'); ?></p>
+        </div>
 
+        <div class="basis-1/2">
+            <?php
+            $image = get_field('book_image');
+            if ($image) :
 
-    <?php endwhile; ?>
+                $alt = $image['alt'];
 
-<?php endif; ?>
-
+                // Thumbnail size attributes.
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+                $width = $image['sizes'][$size . '-width'];
+                $height = $image['sizes'][$size . '-height']; ?>
+                <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
+        </div>
+    </section>
+</section>
 <?php get_footer(); ?>
