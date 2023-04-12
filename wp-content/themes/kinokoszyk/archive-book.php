@@ -35,7 +35,7 @@
                         <img class="object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                     </a>
                     <a class="font-bold text-mobileP lg:text-desktopP md:text-tabletP" href=<?php the_permalink() ?>> <?= the_title(); ?></a>
-                    <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'), " - ", get_field('publisher'); ?></p>
+                    <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
                 </div>
 
             <?php endif; ?>

@@ -5,30 +5,40 @@
         bcn_display();
     } ?>
 </div>
-<?php
-$fields = get_field_objects(); ?>
 
+<section class="mx-2 md:mx-16 lg:mx-[120px]">
 
-<?php if (have_posts()) : ?>
+    <h1 class="font-black font-heading lg:mb-16 text-mobileH1 lg:text-desktopH1 md:text-tabletH1">Books</h1>
 
-    <?php while (have_posts()) : the_post(); ?>
+    <section class="flex flex-row justify-between ">
+        <div class="basis-1/2 max-w-[490px] text-desktopP font-text">
 
-        <!-- <?php the_breadcrumb() ?> -->
+            <h4 class="font-header text-desktopH4"><?php the_title(); ?></h4>
+            <p><?php the_field('year'); ?></p>
+            <p><?php the_field('available_languages'); ?></p>
+            <p><?php the_field('writer'); ?></p>
 
-        <h1 class="font-black mb-16 mx-2 md:mx-16 font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1"><?php post_type_archive_title() ?>Books</h1>
+            <p class="mt-8"><?php the_field('publisher'); ?></p>
+            <p class="font-bold">ISBN: <?php the_field('isbn'); ?></p>
 
-        <h2 class="mx-2 md:mx-16 text-mobileH4 lg:text-desktopH4 md:text-tabletH4"><?php the_title(); ?></h2>
+            <p class="mt-16"><?php the_field('book_description'); ?></p>
+        </div>
 
-        <p class="mx-2 md:mx-16 text-mobile lg:text-desktop md:text-tablet"><?= get_field('year') ?></p>
-        <p class="mx-2 md:mx-16 text-mobile lg:text-desktop md:text-tablet"><?= get_field('language') ?></p>
-        <p class="mx-2 md:mx-16 text-mobile lg:text-desktop md:text-tablet"><?= get_field('writer') ?></p>
+        <div class="basis-1/2">
+            <?php
+            $image = get_field('book_image');
+            if ($image) :
 
-        <p class="m-8 mx-2 md:mx-16 text-mobile lg:text-desktop md:text-tablet"><?= "Publisher: ", get_field('publisher'), "<br>", "ISBN: ", get_field('isbn'); ?></p>
+                $alt = $image['alt'];
 
-        <p class="text-xl"> <?php the_content(); ?> </p>
-
-    <?php endwhile; ?>
-
-<?php endif; ?>
-
+                // Thumbnail size attributes.
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+                $width = $image['sizes'][$size . '-width'];
+                $height = $image['sizes'][$size . '-height']; ?>
+                <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
+        </div>
+    </section>
+</section>
 <?php get_footer(); ?>
