@@ -29,15 +29,15 @@
     <section>
         <h3 class="text-desktopH3 font-text font-light mb-4">Follow us on Facebook for all the latest news!</h3>
         <div class="flex flex-wrap justify-around md:flex-nowrap md:gap-4 lg:justify-around">
-            <section class="w-full md:w-1/2 lg:w-[500px] shrink-1 md:shrink-0 basis-1/2">
-                <h2 class="text-3xl md:text-4xl lg:text-desktopH2 font-semibold">Joanna Helander</h2>
-                <div class="fb-page facebook-wrapper w-full aspect-square" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="1000" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <section class="w-full md:w-1/2 lg:w-[500px] shrink-1 md:shrink-0 basis-1/2 max-md:mb-4">
+                <h2 class="text-3xl md:text-4xl lg:text-desktopH2 font-semibold mb-2">Joanna Helander</h2>
+                <div class="fb-page facebook-wrapper w-full aspect-square" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="800" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                     <blockquote cite="https://www.facebook.com/kinokoszyk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kinokoszyk/">Kino Koszyk - Joanna Helander &amp; Bo Persson</a></blockquote>
                 </div>
             </section>
             <section class="w-full md:w-1/2 lg:w-[500px] shrink-1 md:shrink-0 basis-1/2">
-                <h2 class="text-3xl lg:text-desktopH2 font-semibold">Bo Persson</h2>
-                <div class="fb-page facebook-wrapper w-full aspect-square" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="1000" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <h2 class="text-3xl lg:text-desktopH2 font-semibold mb-2">Bo Persson</h2>
+                <div class="fb-page facebook-wrapper w-full aspect-square" data-href="https://www.facebook.com/kinokoszyk/" data-tabs="timeline" data-width="800" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                     <blockquote cite="https://www.facebook.com/kinokoszyk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kinokoszyk/">Kino Koszyk - Joanna Helander &amp; Bo Persson</a></blockquote>
                 </div>
             </section>
