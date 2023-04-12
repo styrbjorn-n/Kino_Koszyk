@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<div class="breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+<div class="mx-2 md:mx-16 lg:mx-[120px] breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
     <?php if (function_exists('bcn_display')) {
         bcn_display();
     } ?>
 </div>
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-    <h1 class="lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16">Photos</h1>
+    <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16"><?php post_type_archive_title() ?></h1>
     <div class="flex justify-between w-fit gap-1 mb-4 md:mb-16">
         <h3>All <span>|</span></h3>
         <h3>Portraits <span>|</span></h3>
