@@ -14,7 +14,7 @@
             <h2 class="lg:text-desktopH2  font-semibold mb-4 md:text-4xl"><?php the_field('front_page_header') ?></h2>
             <p class="lg:text-desktopP md:text-xl font-text"><?php the_field('front_page_description'); ?></p>
         </div>
-        <img class="mt-3 w-full self-start md:w-1/2" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
+        <img class="mt-6 w-full self-start md:w-1/2" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
         <h3 class="mb-10 font-semibold text-desktopH2">Our collaborations</h3>
@@ -27,7 +27,7 @@
         </div>
     </article>
     <section>
-        <h3 class="text-desktopH3 font-text font-light mb-4">Check out updates at our facebook!</h3>
+        <h3 class="text-desktopH3 font-text font-light mb-4">Follow us on Facebook for all the latest news!</h3>
         <div class="flex flex-wrap justify-center md:flex-nowrap md:gap-4 lg:justify-around">
             <section class="w-full md:w-1/2 lg:w-[500px] shrink-1 md:shrink-0 basis-1/2">
                 <h2 class="text-3xl md:text-4xl lg:text-desktopH2 font-semibold">Joanna Helander</h2>
