@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : ?>
 
+    <div class="mx-2 md:mx-16 lg:mx-[120px] breadcrumbs uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
+            bcn_display();
+        } ?>
+    </div>
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-        <div class="z-1 breadcrumbs uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
-            <?php if (function_exists('bcn_display')) {
-                bcn_display();
-            } ?>
-        </div>
-        <h1 class="z-0 uppercase font-black lg:mb-16 lg:text-desktopH1 "><?php post_type_archive_title(); ?></h1>
+        <h1 class="mt-0 uppercase font-black lg:mb-16 lg:text-desktopH1 "><?php post_type_archive_title(); ?></h1>
         <?php if (have_posts()) : ?>
 
 
