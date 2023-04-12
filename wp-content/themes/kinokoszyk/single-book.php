@@ -19,7 +19,8 @@
             <p><?php the_field('writer'); ?></p>
 
             <p class="mt-8"><?php the_field('publisher'); ?></p>
-            <p class="font-bold">ISBN: <?php the_field('isbn'); ?></p>
+            <p class="inline">ISBN: </p>
+            <p class="inline font-bold"> <?php the_field('isbn'); ?></p>
 
             <p class="mt-16"><?php the_field('book_description'); ?></p>
         </div>
