@@ -7,16 +7,15 @@
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16"><?php post_type_archive_title() ?></h1>
     <div class="flex justify-between w-fit gap-1 mb-4 md:mb-16">
-        <h3>All <span>|</span></h3>
-        <h3>Portraits <span>|</span></h3>
-        <h3>Writers <span>|</span></h3>
-        <h3>Artists </h3>
+        <h3><a href="/joanna-helander/photos/">All </a><span>|</span></h3>
+        <h3><a href="/joanna-helander/photos/motives">Portraits</a> <span>|</span></h3>
+        <h3><a href="/joanna-helander/photos/writers">Writers</a> <span>|</span></h3>
+        <h3><a href="/joanna-helander/photos/artists">Artists</a> </h3>
     </div>
     <?php if (have_posts()) : ?>
         <div class="flex flex-wrap justify-between w-full">
             <!-- This is a card in the grid -->
             <?php while (have_posts()) : the_post(); ?>
-
                 <?php
                 $image = get_field('photography');
                 if ($image) :
@@ -49,5 +48,6 @@
             <!-- EOF: the grid -->
         </div>
     <?php endif; ?>
+
 </section>
 <?php get_footer(); ?>
