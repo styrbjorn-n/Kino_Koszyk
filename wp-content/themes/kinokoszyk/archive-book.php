@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<div class="breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+<div class="mx-2 md:mx-16 lg:mx-[120px] breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
     <?php if (function_exists('bcn_display')) {
         bcn_display();
     } ?>
 </div>
-<h1 class="font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1">Books</h1>
+<h1 class="font-black mx-2 md:mx-16 lg:mx-[120px] font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1"><?php post_type_archive_title() ?></h1>
 <?php if (have_posts()) : ?>
 
     <div class="w-full flex flex-wrap justify-evenly pl-2 lg:gap-8">
