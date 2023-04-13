@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="font-heading mb-16 py-6  px-1 md:px-6 sticky top-0 bg-white z-10 w-full">
+    <header class="font-heading mb-16 py-6  px-1 lg:mx-3 md:px-3 sticky top-0 bg-white z-10 w-full">
 
         <nav>
             <div class="primary-menu hidden">
@@ -31,16 +31,16 @@
 
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full lg:justify-between">
-            <div class="flex flex-nowrap lg:gap-8 w-full">
+            <div class="flex flex-nowrap md:gap-2 lg:gap-8 w-full">
                 <div>
-                    <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
+                    <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 "></a>
                 </div>
-                <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch">
+                <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2">
                     <!-- writes out the menu items specific to the selected menu -->
                     <?php wp_nav_menu(array(
                         'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
                         'container' => false,
-                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
                         'add_li_class' => 'hover:text-hover text-xl',
                         'after' => '<span class="mx-[12px] text-primary"> | </span>'
                     )) ?>
