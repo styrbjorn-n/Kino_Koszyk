@@ -12,7 +12,7 @@
     <article class="mt-16 h-fit flex flex-col md:flex-row md:gap-4">
         <div class="max-w-[740px] mr-24">
             <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"><?php the_field('front_page_header') ?></h2>
-            <p class="lg:text-desktopP md:text-xl"><?php the_field('front_page_description'); ?></p>
+            <p class="lg:text-desktopP md:text-xl font-text"><?php the_field('front_page_description'); ?></p>
         </div>
         <img class="w-full self-center md:w-1/2 max-md:hidden" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
