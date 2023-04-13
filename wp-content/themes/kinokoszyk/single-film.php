@@ -11,7 +11,17 @@
     <?php if (have_posts()) : ?>
 
         <?php while (have_posts()) : the_post(); ?>
-            <!-- 2*bild/trailer -->
+            <?php if (get_field('film_image_2')) :
+                $headerImage = get_field('film_image_2');
+
+                $alt = $headerImage['alt'];
+
+                $size = 'large';
+                $thumb = $headerImage['sizes'][$size];
+                $width = $headerImage['sizes'][$size . '-width'];
+                $height = $headerImage['sizes'][$size . '-height']; ?>
+                <img class="my-16 object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
             <section class="flex flex-row justify-between">
                 <div class="max-w-[490px]">
                     <h4 class="font-header text-desktopH4"><?php the_title(); ?></h4>
@@ -80,7 +90,6 @@
 
                         $alt = $image['alt'];
 
-                        // Thumbnail size attributes.
                         $size = 'large';
                         $thumb = $image['sizes'][$size];
                         $width = $image['sizes'][$size . '-width'];
@@ -94,7 +103,6 @@
 
                         $alt = $image2['alt'];
 
-                        // Thumbnail size attributes.
                         $size = 'large';
                         $thumb = $image2['sizes'][$size];
                         $width = $image2['sizes'][$size . '-width'];
@@ -107,7 +115,6 @@
 
                         $alt = $image3['alt'];
 
-                        // Thumbnail size attributes.
                         $size = 'large';
                         $thumb = $image3['sizes'][$size];
                         $width = $image3['sizes'][$size . '-width'];
@@ -120,7 +127,6 @@
 
                         $alt = $image4['alt'];
 
-                        // Thumbnail size attributes.
                         $size = 'large';
                         $thumb = $image4['sizes'][$size];
                         $width = $image4['sizes'][$size . '-width'];
@@ -133,17 +139,13 @@
 
                         $alt = $image5['alt'];
 
-                        // Thumbnail size attributes.
                         $size = 'large';
                         $thumb = $image5['sizes'][$size];
                         $width = $image5['sizes'][$size . '-width'];
                         $height = $image5['sizes'][$size . '-height']; ?>
                         <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                     <?php endif; ?>
-
                 </div>
-
-                <!-- eventuella selections -->
             </section>
         <?php endwhile; ?>
 
