@@ -35,17 +35,21 @@
                 <div>
                     <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 "></a>
                 </div>
-                <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2">
-                    <!-- writes out the menu items specific to the selected menu -->
-                    <?php wp_nav_menu(array(
-                        'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
-                        'container' => false,
-                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-                        'add_li_class' => 'hover:text-hover text-xl',
-                        'after' => '<span class="mx-[12px] text-primary"> | </span>'
-                    )) ?>
+                <<<<<<< HEAD <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2">
+                    =======
+                    <div class="primary-menu w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
+                        >>>>>>> d240ee89ef3b11f6ffa968797097bcf5ced7125e
+                        <!-- writes out the menu items specific to the selected menu -->
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
+                            'container' => false,
+                            'menu_class' => 'primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                            'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center mb:gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                            'add_li_class' => 'hover:text-hover text-xl',
+                            'after' => '<span class="mx-[12px] text-primary"> | </span>'
+                        )) ?>
 
-                </div>
+                    </div>
             </div>
             <div id="nav-links" class="flex flex-col absolute bg-white z-20 top-0 left-[-180%] w-[120%] h-screen mt-12 opacity-80 backdrop-blur duration-500
         lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
