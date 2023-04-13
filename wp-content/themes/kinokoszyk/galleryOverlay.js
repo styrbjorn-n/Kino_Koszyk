@@ -28,9 +28,8 @@ function close() {
   window.classList.add('left-[-300%]')
 }
 
-function open(element){
-  const window = document.querySelector('#imgOverlay');
+function open(){
+  const display = document.querySelector('#imgOverlay');
 
-  window.classList.remove('left-[-300%]')
-  clickToCange(element);
+  display.classList.remove('left-[-300%]')
 }

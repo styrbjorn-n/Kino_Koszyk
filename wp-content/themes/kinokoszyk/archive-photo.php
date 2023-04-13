@@ -35,7 +35,7 @@
                     $height = $image['sizes'][$size . '-height'];
                 ?>
                     <div class="card flex flex-col w-[49%] lg:w-[32%] shrink-0 mb-3 md:mb-20">
-                        <img class="gallery-img object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="open(this)" />
+                        <img class="gallery-img object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="open()" />
                         <h3 class="font-bold text-mobileP lg:text-desktopP md:text-tabletP"> <?= the_title(); ?></h3>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
                     </div>
