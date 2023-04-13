@@ -1,28 +1,33 @@
 <?php get_header(); ?>
 
-<div class="breadcrumbs uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
-    <?php if (function_exists('bcn_display')) {
-        bcn_display();
-    } ?>
-</div>
 
 <section class="mx-2 md:mx-16 lg:mx-[120px]">
+    <div class="breadcrumbs uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
+            bcn_display();
+        } ?>
+    </div>
 
-    <h1 class="font-black font-heading lg:mb-16 text-mobileH1 lg:text-desktopH1 md:text-tabletH1">Books</h1>
-
-    <section class="flex flex-row justify-between ">
+    <section class="mt-16 flex flex-row justify-between ">
         <div class="basis-1/2 max-w-[490px] text-desktopP font-text">
 
             <h4 class="font-header text-desktopH4"><?php the_title(); ?></h4>
             <p><?php the_field('year'); ?></p>
             <p><?php the_field('available_languages'); ?></p>
-            <p><?php the_field('writer'); ?></p>
+            <p class="mb-8"><?php the_field('writer'); ?></p>
 
-            <p class="mt-8"><?php the_field('publisher'); ?></p>
+            <p class="inline">Publisher: </p>
+            <p class="inline"><?php the_field('publisher'); ?></p>
             <p class="inline">ISBN: </p>
             <p class="inline font-bold"> <?php the_field('isbn'); ?></p>
 
-            <p class="mt-16"><?php the_field('book_description'); ?></p>
+            <p class="my-16"><?php the_field('book_description'); ?></p>
+            <?php
+            $link = get_field('book_link');
+            if ($link) :
+            ?>
+                <a href="<?php the_field('book_link'); ?>"><button class="bg-buttonRed w-36 h-11 text-white"> Buy here </button class=""></a>
+            <?php endif; ?>
         </div>
 
         <div class="basis-1/2">
