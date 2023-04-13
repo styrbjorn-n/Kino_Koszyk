@@ -63,7 +63,7 @@
                         'theme_location' => $menu,
                         'container' => false,
                         'menu_class' => 'nav-menu-list flex flex-col items-center h-full justify-evenly font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
-                        'add_li_class' => 'hover:text-hover text-mobileMenu md:text-tabletMenu w-fit'
+                        'add_li_class' => 'hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink'
                     ));
                     ?>
                 </div>
@@ -73,6 +73,5 @@
                         <div class="w-full h-0.5 bg-gray-600"></div>
                         <div class="w-full h-0.5 bg-gray-600"></div>
                     </div>
-                </div>
         </nav>
     </header>
