@@ -35,7 +35,7 @@
                 <div>
                     <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
                 </div>
-                <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch">
+                <div class="primary-menu w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
                     <!-- writes out the menu items specific to the selected menu -->
                     <?php wp_nav_menu(array(
                         'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
