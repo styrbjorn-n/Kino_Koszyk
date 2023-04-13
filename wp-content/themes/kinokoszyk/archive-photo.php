@@ -51,7 +51,7 @@
     </div>
     <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[205vh] lg:h-[240vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
         <div class=" my-[50%]">
-        <div class="realtive w-full md:w-10/12 aspect-video mx-auto flex-col flex">
+        <div class="realtive w-full md:w-11/12 lg:w-10/12 aspect-video mx-auto flex-col flex">
             <div class="w-full h-full bg-black shrink-1 flex justify-center">
                 <img id="displayImg" class="max-w-full max-h-full" src="" alt="">
             </div>
