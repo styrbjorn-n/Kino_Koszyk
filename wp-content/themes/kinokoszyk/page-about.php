@@ -8,7 +8,7 @@
     </div>
     <h1 class="font-heading font-black text-desktopH1 mb-16"><?php the_title(); ?></h1>
     <div class="w-full border-black">
-        <img class="w-full h-full bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/filmbilder/Kobieta (Women)/8_mars_kvinnodagen2 1.png" alt="">
+        <img class="w-full h-full shrink-0" src="<?= get_template_directory_uri(); ?>/src/filmbilder/Kobieta (Women)/Kvinnodagen 1976.png" alt="Kvinnodagen Ruda, 1976">
     </div>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class=""><?php the_content(); ?></div>
