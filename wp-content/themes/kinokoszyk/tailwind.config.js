@@ -36,9 +36,9 @@ tailwind.config = {
       },
         textColor: {
           'primary': '#333333',
-          'secondary': '#C4C4C4',
+          'secondary': '#CA0000',
           'grayshade': '#8F8989',
-          'hover': '#FE4E30',
+          'hover': '#CA0000',
     },
     colors: {
       'grey': '#818181',
