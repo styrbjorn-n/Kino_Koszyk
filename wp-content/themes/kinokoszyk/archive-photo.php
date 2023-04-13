@@ -51,11 +51,11 @@
     </div>
     <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[205vh] lg:h-[240vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
         <div class=" my-[50%]">
-        <div class="realtive w-10/12 aspect-video mx-auto flex-col flex">
+        <div class="realtive w-full md:w-10/12 aspect-video mx-auto flex-col flex">
             <div class="w-full h-full bg-black shrink-1 flex justify-center">
                 <img id="displayImg" class="max-w-full max-h-full" src="" alt="">
             </div>
-            <div class="text-white flex flex-nowrap w-full h-16 gap-5 px-5">
+            <div class="text-white flex flex-nowrap w-full h-10 md:h-16 gap-2 md:gap-5 px-1 md:px-5">
                 <button id="prev" class="order-first" data-move="-1" onclick="findCurrnetIndex(this)">prev</button>
                 <div id="imgWrapper" class="flex flex-nowrap justify-between w-full h-full">
                     <?php while (have_posts()) : the_post(); ?>
@@ -76,7 +76,7 @@
                             $width = $image['sizes'][$size . '-width'];
                             $height = $image['sizes'][$size . '-height'];
                         ?>
-                            <img class="bottom-img w-[12%] aspect-square cursor-pointer" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="clickToCange(this)" />
+                            <img class="bottom-img dm:w-[12%] aspect-square cursor-pointer" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="clickToCange(this)" />
                         <?php endif; ?>
 
                         <!-- EOF: card in the grid -->
@@ -84,7 +84,7 @@
                 </div>
                 <button id="next" class="order-last" data-move="1" onclick="findCurrnetIndex(this)">next</button>
             </div>
-            <h2 class="font-sans absolute lg:right-20 right-8 top-80 lg:top-[32rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>
+            <h2 class="font-sans absolute right-1 lg:right-20 md:right-8 top-[8rem] md:top-80 lg:top-[32rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>
         </div>
     </div>
 
