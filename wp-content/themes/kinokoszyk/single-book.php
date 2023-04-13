@@ -18,7 +18,7 @@
 
             <p class="inline">Publisher: </p>
             <p class="inline"><?php the_field('publisher'); ?></p>
-            <p class="inline">ISBN: </p>
+            <p class="inline"><br>ISBN: </p>
             <p class="inline font-bold"> <?php the_field('isbn'); ?></p>
 
             <p class="my-16"><?php the_field('book_description'); ?></p>
