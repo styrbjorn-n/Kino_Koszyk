@@ -40,7 +40,7 @@
                     <?php wp_nav_menu(array(
                         'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
                         'container' => false,
-                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                        'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center mb:gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
                         'add_li_class' => 'hover:text-hover text-xl',
                         'after' => '<span class="mx-[12px] text-primary"> | </span>'
                     )) ?>
