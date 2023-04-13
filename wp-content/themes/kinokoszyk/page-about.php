@@ -6,7 +6,10 @@
             bcn_display();
         } ?>
     </div>
-    <h1 class="font-heading text-desktopH1 uppercase"><?php the_title(); ?></h1>
+    <h1 class="font-heading font-black text-desktopH1 mb-16"><?php the_title(); ?></h1>
+    <div class="w-full border-black">
+        <img class="w-full h-full shrink-0" src="<?= get_template_directory_uri(); ?>/src/filmbilder/Kobieta (Women)/Kvinnodagen 1976.png" alt="Kvinnodagen Ruda, 1976">
+    </div>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class=""><?php the_content(); ?></div>
         <?php endwhile; ?>

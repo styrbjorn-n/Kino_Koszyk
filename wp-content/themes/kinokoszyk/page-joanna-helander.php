@@ -13,10 +13,9 @@
             <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"><?php the_field('front_page_header') ?></h2>
             <p class="lg:text-desktopP md:text-xl"><?php the_field('front_page_description'); ?></p>
         </div>
-        <img class="mt-3 w-full self-center md:w-1/2 max-md:hidden" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
-        <h3 class="mb-10 font-semibold text-desktopH2">Our collaborations</h3>
+        <h3 class="mb-10 font-semibold text-desktopH2">Collaborators</h3>
         <div class="h-30 w-full flex flex-wrap md:justify-between">
             <a class="w-1/3 h-1/3 md:w-1/6 md:h-full" href="https://omoss.svt.se/about-svt.html"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image1.svg" alt="logo for Sveriges television."></a>
             <a class="w-1/3 h-1/3 md:w-1/6 md:h-full" href="https://www.filminstitutet.se/en/about-us/swedish-film-institute/"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image2.svg" alt="logo for Svenska filminstitutet."></a>
