@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="font-heading mb-16 mx-6 py-6">
+    <header class="font-heading mb-16 mx-6 py-6 sticky top-0 bg-white z-10">
         <?php wp_body_open(); ?>
         <nav>
             <div class="primary-menu hidden">
@@ -47,7 +47,7 @@
 
                 </div>
             </div>
-            <div id="nav-links" class="flex flex-col absolute bg-white z-10 top-0 left-[-100%] w-full h-full mt-12 opacity-80 backdrop-blur duration-500
+            <div id="nav-links" class="flex flex-col absolute bg-white z-20 top-0 left-[-100%] w-full h-screen mt-12 opacity-80 backdrop-blur duration-500
         lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
 
                 <?php
