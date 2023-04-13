@@ -5,9 +5,7 @@
         bcn_display();
     } ?>
 </div>
-<?php
-$fields = get_field_objects(); ?>
-
+<?php $fields = get_field_objects(); ?>
 
 <?php if (have_posts()) : ?>
 
@@ -16,7 +14,6 @@ $fields = get_field_objects(); ?>
         <h2 class="text-4xl"><?php the_title(); ?></h2>
 
         <p class="text-xl"> <?php the_content(); ?> </p>
-
 
     <?php endwhile; ?>
 
