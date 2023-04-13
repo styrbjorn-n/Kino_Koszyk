@@ -49,14 +49,14 @@
         </div>
     <?php endif; ?>
     </div>
-    <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[120vh] sm:h-[140vh] md:h-[200vh] lg:h-[200vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
+    <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[120vh] sm:h-[140vh] md:h-[200vh] lg:h-[182vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
         <div class=" mt-[85%] md:mt-[75%] lg:mt-[50%]">
         <div class="realtive w-full md:w-11/12 lg:w-10/12 aspect-video mx-auto flex-col flex">
             <div class="w-full h-full bg-black shrink-1 flex justify-center">
                 <img id="displayImg" class="max-w-full max-h-full" src="" alt="">
             </div>
             <div class="text-white flex flex-nowrap w-full h-10 md:h-16 gap-2 md:gap-5 px-1 md:px-5">
-                <button id="prev" class="order-first" data-move="-1" onclick="findCurrnetIndex(this)">prev</button>
+                <button id="prev" class="order-first text-6xl" data-move="-1" onclick="findCurrnetIndex(this)">&#x2190;</button>
                 <div id="imgWrapper" class="flex flex-nowrap justify-between w-full h-full">
                     <?php while (have_posts()) : the_post(); ?>
 
@@ -82,9 +82,9 @@
                         <!-- EOF: card in the grid -->
                     <?php endwhile; ?>
                 </div>
-                <button id="next" class="order-last" data-move="1" onclick="findCurrnetIndex(this)">next</button>
+                <button id="next" class="order-last text-6xl" data-move="1" onclick="findCurrnetIndex(this)">&#x2192;</button>
             </div>
-            <h2 class="font-sans absolute right-1 lg:right-20 md:right-8 top-[16rem] md:top-[34rem] lg:top-[32rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>
+            <h2 class="font-sans absolute right-1 lg:right-20 md:right-8 top-[16rem] md:top-[34rem] lg:top-[44.5rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>
         </div>
     </div>
 
