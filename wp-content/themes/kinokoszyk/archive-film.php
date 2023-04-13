@@ -44,12 +44,14 @@
                     <!-- EOF: card in the grid -->
                 <?php endwhile; ?>
             </div>
-            <section class="flex flex-row justify-center">
-                <?php echo the_pagination(array(
-                    'prev_text'    => ' < ',
-                    'next_text'    => ' > '
-                ));
-                ?>
+            <section class="flex text-desktopP flex-row justify-center">
+                <div class="mx-2 mt-16 mb-28 ">
+                    <?php echo the_pagination(array(
+                        'prev_text'    => ' < ',
+                        'next_text'    => ' > '
+                    ));
+                    ?>
+                </div>
             </section>
 
             <!-- EOF: the grid -->
