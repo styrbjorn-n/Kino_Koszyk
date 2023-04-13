@@ -5,13 +5,20 @@
         bcn_display();
     } ?>
 </div>
-<h1 class="font-black mb-16 md:mx-16 font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1"><?php post_type_archive_title() ?></h1>
+<h1 class="font-black lg:mx-[120px] mb-16 mx-2 md:mx-16 font-heading text-mobileH1 lg:text-desktopH1 md:text-tabletH1"><?php post_type_archive_title() ?></h1>
 <?php if (have_posts()) : ?>
 
     <div class="w-full flex flex-wrap justify-evenly pl-2 lg:gap-8">
         <!-- This is a card in the grid -->
-        <?php while (have_posts()) : the_post(); ?>
-
+        <?php while (have_posts()) : the_post();
+            $posts = print_r(get_posts(array(
+                'post_type'         => 'book',
+                'posts_per_page'    => 12,
+                'meta_key'          => 'start_date',
+                'orderby'           => 'meta_value',
+                'order'             => 'DESC'
+            )));
+        ?>
             <?php
             $image = get_field('book_image');
             if ($image) :

@@ -16,7 +16,6 @@ $fields = get_field_objects(); ?>
 
         <p class="text-xl"> <?php the_content(); ?> </p>
 
-
     <?php endwhile; ?>
 
 <?php endif; ?>
