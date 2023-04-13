@@ -18,7 +18,7 @@
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full lg:justify-between">
             <div class="flex flex-nowrap md:gap-2 lg:gap-8 w-full justify-between">
-                <div class="flex gap-12">
+                <div class="flex gap-2 md:gap-12">
                     <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
 
                     <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="nav-links" class="flex flex-col absolute bg-white z-20 top-0 left-[-180%] w-[120%] h-screen mt-12 opacity-80 backdrop-blur duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
+                <div id="nav-links" class="flex flex-col absolute bg-white z-20 top-0 left-[-100%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
 
                     <?php
 

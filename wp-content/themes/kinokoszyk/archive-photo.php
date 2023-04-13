@@ -35,7 +35,7 @@
                     $height = $image['sizes'][$size . '-height'];
                 ?>
                     <div class="card flex flex-col w-[49%] lg:w-[32%] shrink-0 mb-3 md:mb-20 cursor-pointer">
-                        <img class="gallery-img object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="openDisplay(this)" />
+                        <img class="gallery-img object-cover aspect-square w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="openDisplay(this)" />
                         <h3 class="font-bold text-mobileP lg:text-desktopP md:text-tabletP"> <?= the_title(); ?></h3>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
                     </div>
@@ -49,8 +49,8 @@
         </div>
     <?php endif; ?>
     </div>
-    <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[205vh] lg:h-[240vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
-        <div class=" my-[50%]">
+    <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[120vh] sm:h-[140vh] md:h-[200vh] lg:h-[200vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
+        <div class=" mt-[85%] md:mt-[75%] lg:mt-[50%]">
         <div class="realtive w-full md:w-11/12 lg:w-10/12 aspect-video mx-auto flex-col flex">
             <div class="w-full h-full bg-black shrink-1 flex justify-center">
                 <img id="displayImg" class="max-w-full max-h-full" src="" alt="">
@@ -84,7 +84,7 @@
                 </div>
                 <button id="next" class="order-last" data-move="1" onclick="findCurrnetIndex(this)">next</button>
             </div>
-            <h2 class="font-sans absolute right-1 lg:right-20 md:right-8 top-[8rem] md:top-80 lg:top-[32rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>
+            <h2 class="font-sans absolute right-1 lg:right-20 md:right-8 top-[16rem] md:top-[34rem] lg:top-[32rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>
         </div>
     </div>
 
