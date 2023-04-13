@@ -35,7 +35,7 @@
                     $height = $image['sizes'][$size . '-height'];
                 ?>
                     <div class="card flex flex-col w-[49%] lg:w-[32%] shrink-0 mb-3 md:mb-20">
-                        <img class="gallery-img object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="open()" />
+                        <img class="gallery-img object-cover aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="openDisplay(this)" />
                         <h3 class="font-bold text-mobileP lg:text-desktopP md:text-tabletP"> <?= the_title(); ?></h3>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
                     </div>
@@ -83,7 +83,7 @@
                 </div>
                 <button id="next" class="order-last" data-move="1" onclick="findCurrnetIndex(this)">next</button>
             </div>
-            <h2 class="font-sans absolute top-[-10px] right-0 text-6xl">X</h2>
+            <h2 class="font-sans absolute top-[-10px] right-0 text-6xl" onclick="closeDisplay()">X</h2>
         </div>
 </section>
 <?php get_footer(); ?>

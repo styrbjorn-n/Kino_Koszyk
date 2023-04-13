@@ -22,14 +22,15 @@ function findCurrnetIndex(element) {
   displayImg.src = imgArray[index].src;
 }
 
-function close() {
+function closeDisplay() {
   const window = document.querySelector('#imgOverlay');
 
   window.classList.add('left-[-300%]')
 }
 
-function open(){
+function openDisplay(element){
   const display = document.querySelector('#imgOverlay');
 
   display.classList.remove('left-[-300%]')
+  clickToCange(element)
 }
