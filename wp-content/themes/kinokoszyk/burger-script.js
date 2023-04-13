@@ -2,7 +2,7 @@ function onToggleMenu(e) {
   const navLinks = document.querySelector('#nav-links');
   const lines = document.querySelector('#line-container').children;
   e.name = e.name === 'menu' ? 'close' : 'menu';
-  navLinks.classList.toggle('translate-x-full');
+  navLinks.classList.toggle('translate-x-[140%]');
 
   // moves burger icon lines in to an x
   lines[0].classList.toggle('rotate-45');
