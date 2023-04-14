@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="mx-2 md:mx-16 lg:mx-[120px]">
-    <div class="breadcrumbs uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <div class="breadcrumbs mb-16 uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
         <?php if (function_exists('bcn_display')) {
             bcn_display();
         } ?>
@@ -20,9 +20,12 @@
                 $thumb = $headerImage['sizes'][$size];
                 $width = $headerImage['sizes'][$size . '-width'];
                 $height = $headerImage['sizes'][$size . '-height']; ?>
-                <img class="my-16 object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
-            <section class="flex flex-row justify-between">
+            <?php if (get_field('trailer')) :
+                the_field('trailer');
+            endif; ?>
+            <section class="mt-16 flex flex-row justify-between">
                 <div class="max-w-[490px]">
                     <h4 class="font-header text-desktopH4"><?php the_title(); ?></h4>
                     <p class="mb-16"><?php the_field('year'); ?></p>

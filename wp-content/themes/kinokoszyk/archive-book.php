@@ -9,7 +9,7 @@
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
         <h1 class="mt-0 uppercase font-black lg:mb-16 lg:text-desktopH1 md:text-tabletH1 text-mobileH1"><?php post_type_archive_title(); ?></h1>
 
-        <div class="w-full flex flex-wrap justify-between">
+        <div class="w-full flex flex-wrap justify-start lg:gap-14 gap-1">
             <!-- This is a card in the grid -->
             <?php while (have_posts()) : the_post(); ?>
                 <?php
@@ -30,7 +30,7 @@
                 ?>
 
                     <!-- What's being showed -->
-                    <div class="flex flex-col w-1/2 pr-2 lg:w-1/5">
+                    <div class="flex flex-col w-[48%] lg:w-[30%] font-text mb-16">
                         <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
                             <img class="object-fill hover:border-2 aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                         </a>
@@ -43,8 +43,8 @@
                 <!-- EOF: card in the grid -->
             <?php endwhile; ?>
         </div>
-        <section class="flex text-desktopP flex-row justify-center">
-            <div class="mx-2 mt-16 mb-28 ">
+        <section class="font-text flex text-desktopP flex-row justify-center">
+            <div class="mx-2 mt-2 mb-28 ">
                 <?php echo the_pagination(array(
                     'prev_text'    => ' < ',
                     'next_text'    => ' > '

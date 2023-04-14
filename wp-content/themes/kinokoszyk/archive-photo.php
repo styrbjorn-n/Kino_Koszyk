@@ -15,7 +15,7 @@
 
 
     <?php if (have_posts()) : ?>
-        <div class="flex flex-wrap justify-between w-full">
+        <div class="w-full flex flex-wrap justify-start lg:gap-14 gap-1">
             <!-- This is a card in the grid -->
             <?php while (have_posts()) : the_post(); ?>
                 <?php
@@ -34,7 +34,7 @@
                     $width = $image['sizes'][$size . '-width'];
                     $height = $image['sizes'][$size . '-height'];
                 ?>
-                    <div class="card flex flex-col w-[49%] lg:w-[32%] shrink-0 mb-3 md:mb-20 cursor-pointer">
+                    <div class="card flex flex-col w-[48%] lg:w-[30%] shrink-0 mb-3 md:mb-20 cursor-pointer">
                         <img class="gallery-img object-cover aspect-square w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="openDisplay(this)" />
                         <h3 class="font-bold text-mobileP lg:text-desktopP md:text-tabletP"> <?= the_title(); ?></h3>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
@@ -47,6 +47,15 @@
 
             <!-- EOF: the grid -->
         </div>
+        <section class="font-text flex text-desktopP flex-row justify-center">
+            <div class="mx-2 mt-16 mb-28 ">
+                <?php echo the_pagination(array(
+                    'prev_text'    => ' < ',
+                    'next_text'    => ' > '
+                ));
+                ?>
+            </div>
+        </section>
     <?php endif; ?>
     </div>
     <div id="imgOverlay" class="bg-black bg-opacity-60 bg-cover w-full h-[120vh] sm:h-[140vh] md:h-[200vh] lg:h-[182vh] absolute top-0 left-[-300%] bottom-0 right-0 mx-auto"">
@@ -80,8 +89,10 @@
                         <?php endif; ?>
 
                         <!-- EOF: card in the grid -->
+
                     <?php endwhile; ?>
                 </div>
+
                 <button id="next" class="order-last text-6xl" data-move="1" onclick="findCurrnetIndex(this)">&#x2192;</button>
             </div>
             <h2 class="font-sans absolute right-1 lg:right-20 md:right-8 top-[16rem] md:top-[34rem] lg:top-[44.5rem] text-6xl cursor-pointer" onclick="closeDisplay()">X</h2>

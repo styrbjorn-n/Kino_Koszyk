@@ -11,7 +11,7 @@
         <?php if (have_posts()) : ?>
 
 
-            <div class="w-full flex flex-wrap justify-between">
+            <div class="w-full flex flex-wrap justify-start lg:gap-14 gap-1">
                 <!-- This is a card in the grid -->
                 <?php while (have_posts()) : the_post(); ?>
 
