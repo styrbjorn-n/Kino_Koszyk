@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
-
+    <title>Kino Koszyk</title>
     <link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/src/logoblack.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@
                             <?php wp_nav_menu(array(
                                 'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
                                 'container' => false,
-                                'menu_class' => 'primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-                                'menu_class' => 'primary-menu-list flex flex-row items-center h-full justify-center mb:gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                                'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
+                                'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row items-center h-full justify-center mb:gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
                                 'add_li_class' => 'hover:text-hover text-desktopLink',
                                 'after' => '<span class="max-sm:mr-[8px] sm:mx-[12px] text-primary"> | </span>'
                             )) ?>

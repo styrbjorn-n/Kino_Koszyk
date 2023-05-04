@@ -1,6 +1,10 @@
 tailwind.config = {
   theme: {
     extend: {
+      screens: {
+        'xs': { 'raw': '(min-height: 400px)' },
+        // => @media (min-height: 800px) { ... }
+      },
       fontFamily: {
         heading: ['Playfair Display'],
         text: ['Karla']
