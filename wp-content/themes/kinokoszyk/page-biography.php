@@ -6,7 +6,7 @@
             bcn_display();
         } ?>
     </div>
-    <h1 class="font-heading font-black mb-16 lg:text-desktopH1 md:text-tabletH1 max-md:mb-4 text-mobileH1"><?php the_title(); ?></h1>
+    <h1 class="font-heading uppercase font-black mb-16 lg:text-desktopH1 md:text-tabletH1 max-md:mb-4 text-mobileH1"><?php the_title(); ?></h1>
     <div class="w-full">
         <img class="w-full h-full shrink-0" src="<?= get_template_directory_uri(); ?>/src/biography.png" alt="Joanna Helander">
     </div>
