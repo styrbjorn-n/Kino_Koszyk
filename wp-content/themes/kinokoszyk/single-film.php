@@ -32,10 +32,6 @@
                     <p><?php the_field('film_description'); ?></p>
                 </div>
                 <div>
-                    <?php if (get_field('')) : ?>
-                        <p><?php the_field(''); ?></p>
-                    <?php endif; ?>
-
                     <?php if (get_field('directors')) : ?>
                         <p class="font-bold">Directors</p>
                         <p><?php the_field('directors'); ?></p>
@@ -57,31 +53,22 @@
                         <p><?php the_field('featuring'); ?> </p>
                     <?php endif; ?>
 
-                    <?php if (get_field('role_1')) : ?>
+                    <?php if (get_field('role_1') && get_field('role_name_1')) : ?>
                         <p class="font-bold mt-10"> <?php the_field('role_1'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('role_name_1')) : ?>
                         <p><?php the_field('role_name_1'); ?></p>
                     <?php endif; ?>
 
-                    <?php if (get_field('role_2')) : ?>
-                        <p class="font-bold mt-10"><?php the_field('role_2'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('role_name_2')) : ?>
+                    <?php if (get_field('role_2') && get_field('role_name_2')) : ?>
+                        <p class="font-bold mt-10"> <?php the_field('role_2'); ?></p>
                         <p><?php the_field('role_name_2'); ?></p>
                     <?php endif; ?>
 
-                    <?php if (get_field('role_3')) : ?>
-                        <p class="font-bold mt-10"><?php the_field('role_3'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('role_name_3')) : ?>
+                    <?php if (get_field('role_3') && get_field('role_name_3')) : ?>
+                        <p class="font-bold mt-10"> <?php the_field('role_3'); ?></p>
                         <p><?php the_field('role_name_3'); ?></p>
                     <?php endif; ?>
-
-                    <?php if (get_field('role_4')) : ?>
-                        <p class="font-bold mt-10"><?php the_field('role_4'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('role_name_4')) : ?>
+                    <?php if (get_field('role_4') && get_field('role_name_4')) : ?>
+                        <p class="font-bold mt-10"> <?php the_field('role_4'); ?></p>
                         <p><?php the_field('role_name_4'); ?></p>
                     <?php endif; ?>
 
