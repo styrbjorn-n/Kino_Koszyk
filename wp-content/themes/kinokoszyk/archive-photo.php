@@ -7,6 +7,7 @@
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16"><?php post_type_archive_title() ?></h1>
     <div class="flex justify-between w-fit gap-2 mb-4 md:mb-16 font-text">
+        <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a><span>|</span></h3>
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <?php
@@ -26,6 +27,7 @@
         <!-- <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a><span>|</span></h3>
         <h3><a href="/joanna-helander/photos/motives">Portraits</a> <span>|</span></h3>
         <h3><a href="/joanna-helander/photos/writers">Writers</a> <span>|</span></h3>
+        <h3><a href="/joanna-helander/photos/artists">Artists</a> </h3>
         <h3><a href="/joanna-helander/photos/artists">Artists</a> </h3> -->
     </div>
 

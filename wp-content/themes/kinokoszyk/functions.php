@@ -27,7 +27,6 @@ function remove_default_post_type()
 }
 
 
-//I made a lil' function to tidy up the header. Shout if you want it gone.
 function print_menu_items($menu)
 {
   if ($menu) {
@@ -37,6 +36,33 @@ function print_menu_items($menu)
   }
 };
 
+function print_partner_items($number)
+{
+  if (get_field('partner_link_' . $number) && get_field('partner_logo_' . $number)) {
+    $image = get_field('partner_logo_' . $number);
+    $alt = $image['alt'];
+    $size = 'large';
+    $thumb = $image['sizes'][$size];
+
+    echo '<a href="' . get_field('partner_link_' . $number) . '"><img src="' . esc_url($thumb) . '" alt="' . esc_attr($alt) . '"></a>';
+  }
+};
+
+function print_film_role($role)
+{
+  if (get_field($role)) {
+    echo '<p class="font-bold mt-10">' . ucfirst($role) . '</p>';
+    echo '<p>' . get_field($role) . '</p>';
+  }
+};
+
+function print_film_extra_role($number)
+{
+  if (get_field('role_' . $number) && get_field('role_name_' . $number)) {
+    echo '<p class="font-bold mt-10">' . get_field('role_' . $number) . '</p>';
+    echo '<p>' . get_field('role_name_' . $number) . '</p>';
+  }
+};
 
 function register_theme_menus()
 {

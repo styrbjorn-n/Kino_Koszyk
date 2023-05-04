@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<div id="fb-root"></div>
 
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
 
@@ -15,14 +14,26 @@
         </div>
         <img class="w-full self-center md:w-1/2 max-md:hidden" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
+
+    <!-- HÅR skA EN "ARCHIVE" GREJ IN -->
+
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
         <h3 class="mb-10 font-semibold text-desktopH2">Partners</h3>
         <div class="h-30 w-full flex flex-wrap md:justify-between">
-            <a class="w-1/3 h-1/3 md:w-1/6 md:h-full" href="https://omoss.svt.se/about-svt.html"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image1.svg" alt="logo for Sveriges television."></a>
-            <a class="w-1/3 h-1/3 md:w-1/6 md:h-full" href="https://www.filminstitutet.se/en/about-us/swedish-film-institute/"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image2.svg" alt="logo for Svenska filminstitutet."></a>
-            <a class="w-1/3 h-1/3 md:w-1/6 md:h-full" href="https://www.arte.tv/sites/corporate/en/what-we-do/"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image3.svg" alt="logo for Arte."></a>
-            <a class="w-1/2 h-1/3 md:w-1/6 md:h-full" href="https://arscameralis.pl/en/"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image4.svg" alt="logo for for The Cultural Institution Ars Cameralis."></a>
-            <a class="w-1/2 h-1/3 md:w-1/6 md:h-full" href="https://filmivast.se/"><img class="w-full h-full" src="<?= get_template_directory_uri(); ?>/src/svg-icons/image5.svg" alt="logo for Film i väst."></a>
+
+            <?php
+            print_partner_items(1);
+            print_partner_items(2);
+            print_partner_items(3);
+            print_partner_items(4);
+            print_partner_items(5);
+            print_partner_items(6);
+            print_partner_items(7);
+            print_partner_items(8);
+            print_partner_items(9);
+            print_partner_items(10);
+            ?>
+
         </div>
     </article>
 

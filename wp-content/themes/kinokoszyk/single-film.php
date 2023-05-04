@@ -32,45 +32,18 @@
                     <p><?php the_field('film_description'); ?></p>
                 </div>
                 <div>
-                    <?php if (get_field('directors')) : ?>
-                        <p class="font-bold">Directors</p>
-                        <p><?php the_field('directors'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('producers')) : ?>
-                        <p class="font-bold mt-10">Producers</p>
-                        <p><?php the_field('producers'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('cinematography')) : ?>
-                        <p class="font-bold mt-10">Cinematography</p>
-                        <p><?php the_field('cinematography'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('music')) : ?>
-                        <p class="font-bold mt-10">Music</p>
-                        <p><?php the_field('music'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('featuring')) : ?>
-                        <p class="font-bold mt-10">Featuring</p>
-                        <p><?php the_field('featuring'); ?> </p>
-                    <?php endif; ?>
+                    <?php
+                    print_film_role('directors');
+                    print_film_role('producers');
+                    print_film_role('cinematography');
+                    print_film_role('music');
+                    print_film_role('featuring');
 
-                    <?php if (get_field('role_1') && get_field('role_name_1')) : ?>
-                        <p class="font-bold mt-10"> <?php the_field('role_1'); ?></p>
-                        <p><?php the_field('role_name_1'); ?></p>
-                    <?php endif; ?>
-
-                    <?php if (get_field('role_2') && get_field('role_name_2')) : ?>
-                        <p class="font-bold mt-10"> <?php the_field('role_2'); ?></p>
-                        <p><?php the_field('role_name_2'); ?></p>
-                    <?php endif; ?>
-
-                    <?php if (get_field('role_3') && get_field('role_name_3')) : ?>
-                        <p class="font-bold mt-10"> <?php the_field('role_3'); ?></p>
-                        <p><?php the_field('role_name_3'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('role_4') && get_field('role_name_4')) : ?>
-                        <p class="font-bold mt-10"> <?php the_field('role_4'); ?></p>
-                        <p><?php the_field('role_name_4'); ?></p>
-                    <?php endif; ?>
+                    print_film_extra_role(1);
+                    print_film_extra_role(2);
+                    print_film_extra_role(3);
+                    print_film_extra_role(4);
+                    ?>
 
                 </div>
                 <div>

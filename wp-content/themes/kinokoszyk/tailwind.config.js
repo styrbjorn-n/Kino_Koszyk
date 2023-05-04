@@ -1,6 +1,9 @@
 tailwind.config = {
   theme: {
     extend: {
+      boxShadow: {
+        'book': '8px 10px 6px #978888',
+      },
       screens: {
         'xs': { 'raw': '(min-height: 400px)' },
         // => @media (min-height: 800px) { ... }

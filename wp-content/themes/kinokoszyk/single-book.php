@@ -42,7 +42,7 @@
                 $thumb = $image['sizes'][$size];
                 $width = $image['sizes'][$size . '-width'];
                 $height = $image['sizes'][$size . '-height']; ?>
-                <img class="object-cover  w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <img class="object-cover shadow-book w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
     </section>
