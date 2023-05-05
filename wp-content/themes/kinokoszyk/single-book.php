@@ -24,15 +24,16 @@
             <p class="my-16"><?php the_field('book_description'); ?></p>
             <?php
             $link = get_field('book_link');
-            if ($link) :
+            $linkText = get_field('book_link_text');
+            if ($link && $linkText) :
             ?>
-                <a href="<?php the_field('book_link'); ?>"><button class="bg-buttonRed w-36 h-11 text-white"> Buy here </button class=""></a>
+                <a href="<?php the_field('book_link'); ?>"><button class="bg-buttonRed px-2 h-11 text-white"><?php the_field('book_link_text'); ?> </button class=""></a>
             <?php endif; ?>
         </div>
 
         <div class="basis-1/2">
             <?php
-            $image = get_field('book_image');
+            $image = get_field('book_cover_image');
             if ($image) :
 
                 $alt = $image['alt'];
@@ -44,7 +45,65 @@
                 $height = $image['sizes'][$size . '-height']; ?>
                 <img class="object-cover shadow-book w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
+
+
         </div>
+        <div class="">
+
+            <?php
+            $image = get_field('book_image_1');
+            if ($image) :
+
+                $alt = $image['alt'];
+
+                // Thumbnail size attributes.
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+                $width = $image['sizes'][$size . '-width'];
+                $height = $image['sizes'][$size . '-height']; ?>
+                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
+            <?php
+            $image = get_field('book_image_2');
+            if ($image) :
+
+                $alt = $image['alt'];
+
+                // Thumbnail size attributes.
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+                $width = $image['sizes'][$size . '-width'];
+                $height = $image['sizes'][$size . '-height']; ?>
+                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
+            <?php
+            $image = get_field('book_image_3');
+            if ($image) :
+
+                $alt = $image['alt'];
+
+                // Thumbnail size attributes.
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+                $width = $image['sizes'][$size . '-width'];
+                $height = $image['sizes'][$size . '-height']; ?>
+                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
+            <?php
+            $image = get_field('book_image_4');
+            if ($image) :
+
+                $alt = $image['alt'];
+
+                // Thumbnail size attributes.
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+                $width = $image['sizes'][$size . '-width'];
+                $height = $image['sizes'][$size . '-height']; ?>
+                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+            <?php endif; ?>
+        </div>
+
     </section>
 </section>
 <?php get_footer(); ?>
