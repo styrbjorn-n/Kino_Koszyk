@@ -91,7 +91,7 @@ function print_category_terms($category)
           'primary-menu' => __('Primary Menu'),
           'kino-menu' => __('Kino Menu'),
           'joanna-menu' => __('Joanna Menu'),
-          'footer-menu' => __('Footer Menu')
+          'joanna-sub-menu' => __('Joanna Sub Menu')
         ));
       }
 

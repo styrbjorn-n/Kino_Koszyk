@@ -33,12 +33,14 @@
                 </div>
                 <div>
                     <?php
+                    //functions.php:51 as of 2023/05/04
                     print_film_role('directors');
                     print_film_role('producers');
                     print_film_role('cinematography');
                     print_film_role('music');
                     print_film_role('featuring');
 
+                    //functions.php:59 as of 2023/05/04
                     print_film_extra_role(1);
                     print_film_extra_role(2);
                     print_film_extra_role(3);
