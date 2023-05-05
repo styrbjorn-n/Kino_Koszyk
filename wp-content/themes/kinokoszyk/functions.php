@@ -71,18 +71,13 @@ function print_category_terms($category)
   if (!empty($terms) && !is_wp_error($terms)) {
 
     print_r($terms);
-
-?>
-    <ul class="flex justify-between w-fit gap-4 mb-4 md:mb-16 font-text">
+?><ul class="flex justify-between w-fit gap-4 mb-4 md:mb-16 font-text">
       <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a></h3>
       <?php foreach ($terms as $term) : ?>
         <span class="ml-2">|</span>
         <li>
-
           <h3><a><?php echo esc_html($term->name); ?></a></h3>
-
         </li>
-
       <?php endforeach; ?>
     </ul><?
         }
