@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="mx-[120px] mb-32">
-    <div class="relative breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <div class="flex relative breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
         <?php if (function_exists('bcn_display')) {
             bcn_display();
         } ?>

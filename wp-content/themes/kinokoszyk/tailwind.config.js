@@ -45,12 +45,13 @@ tailwind.config = {
           'secondary': '#CA0000',
           'grayshade': '#8F8989',
           'hover': '#CA0000',
+          'current-item': '#333333'
     },
     colors: {
       'grey': '#818181',
       'lightgrey':'#E2E2E2',
       'buttonRed': '#CA0000',
-      'hoverRed': 'FF0000'
+      'hoverRed': 'FF0000',
     }
     }
   },

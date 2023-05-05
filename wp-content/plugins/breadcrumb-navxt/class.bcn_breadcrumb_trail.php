@@ -196,7 +196,7 @@ class bcn_breadcrumb_trail
 		$breadcrumb = $this->add(new bcn_breadcrumb(
 			$search_query,
 			$this->opt['Hsearch_template_no_anchor'],
-			array('search', 'current-item'),
+			array('search', 'current-item text-primary'),
 			get_search_link($search_query)
 		));
 		//If we're paged, or allowing the current item to be linked, let's link to the first page
@@ -224,7 +224,7 @@ class bcn_breadcrumb_trail
 			$breadcrumb = $this->add(new bcn_breadcrumb(
 				get_the_author_meta($this->opt['Eauthor_name'], $author_data->ID),
 				$this->opt['Hauthor_template_no_anchor'],
-				array('author', 'current-item'),
+				array('author', 'current-item text-primary'),
 				get_author_posts_url($author_data->ID),
 				$author_data->ID
 			));
@@ -517,7 +517,7 @@ class bcn_breadcrumb_trail
 				$post->ID
 			));
 			if ($is_current_item) {
-				$breadcrumb->add_type('current-item');
+				$breadcrumb->add_type('current-item text-primary');
 			}
 			//Under a couple of circumstances we will want to link this breadcrumb
 			if ($force_link || ($is_current_item && $this->opt['bcurrent_item_linked']) || ($is_paged && $this->opt['bpaged_display'])) {
@@ -833,7 +833,7 @@ class bcn_breadcrumb_trail
 			get_post_type_archive_link($type_str)
 		));
 		if ($is_current_item) {
-			$breadcrumb->add_type('current-item b');
+			$breadcrumb->add_type('current-item b text-primary');
 		}
 		//Under a couple of circumstances we will want to link this breadcrumb
 		if ($force_link || ($is_current_item && $this->opt['bcurrent_item_linked']) || ($is_paged && $this->opt['bpaged_display'])) {
@@ -913,7 +913,7 @@ class bcn_breadcrumb_trail
 			));
 			//If we are at home, or any root page archive then we need to add the current item type
 			if ($is_current_item) {
-				$breadcrumb->add_type('current-item');
+				$breadcrumb->add_type('current-item text-primary');
 			}
 			//If we're not on the current item we need to setup the anchor
 			if (!$is_current_item || ($is_current_item && $this->opt['bcurrent_item_linked']) || ($is_paged && $this->opt['bpaged_display'])) {
