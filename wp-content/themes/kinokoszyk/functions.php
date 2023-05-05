@@ -391,11 +391,11 @@ function print_category_terms($category, $slug)
 
   if (!empty($terms) && !is_wp_error($terms)) { ?>
     <ul class="flex justify-between w-fit gap-4 mb-4 md:mb-16 font-text">
-      <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a></h3>
+      <h3 class="<?= $slug == 'photos' ? 'font-bold text-secondary' : '' ?>"><a href="/joanna-helander/photos/">All </a></h3>
       <?php foreach ($terms as $term) : ?>
         <span class="ml-2">|</span>
         <li>
-          <h3 class="<?= $slug == $term->name ? 'font-bold text-secondary' : '' ?>"><a href="<?php echo get_term_link($term) ?>"><?= esc_html($term->name); ?></a></h3>
+          <h3 class="<?= $slug == $term->slug ? 'font-bold text-secondary' : '' ?>"><a href="<?php echo get_term_link($term) ?>"><?= esc_html($term->name); ?></a></h3>
         </li>
       <?php endforeach; ?>
     </ul><?
