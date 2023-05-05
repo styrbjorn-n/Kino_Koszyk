@@ -69,19 +69,19 @@ function print_category_terms($category)
   $terms = get_terms($category); // Replace 'category' with the slug of the desired taxonomy
 
   if (!empty($terms) && !is_wp_error($terms)) {
-
-    print_r($terms);
+    <?php $currentPageId = get_queried_object_id();
 ?><ul class="flex justify-between w-fit gap-4 mb-4 md:mb-16 font-text">
       <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a></h3>
       <?php foreach ($terms as $term) : ?>
         <span class="ml-2">|</span>
         <li>
-          <h3><a><?php echo esc_html($term->name); ?></a></h3>
+          <h3><a href="<?php echo get_term_link($term) ?>"><?php echo esc_html($term->name); ?></a></h3>
         </li>
       <?php endforeach; ?>
     </ul><?
         }
       }
+      <?= $currentPageId == $item->object_id ? 'underline' : '' ?>
 
       add_action('init', 'print_category_terms');
 

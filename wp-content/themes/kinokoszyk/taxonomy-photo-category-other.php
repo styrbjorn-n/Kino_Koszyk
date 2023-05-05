@@ -18,18 +18,13 @@
 
     <?php if (have_posts()) : ?>
         <div class="w-full flex flex-wrap justify-start lg:gap-14 gap-1">
+
+
             <!-- This is a card in the grid -->
 
 
 
             <?php while (have_posts()) : the_post(); ?>
-
-                <?php
-                $term = get_field('test');
-                if ($term) : ?>
-                    <h2>Term name: <?php echo esc_html($term->name); ?></h2>
-                    <p>Term color: <?php the_field('color', $term); ?></p>
-                <?php endif; ?>
 
                 <?php
 
