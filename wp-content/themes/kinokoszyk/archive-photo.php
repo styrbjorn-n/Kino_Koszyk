@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+$currentPageIdMenu = get_queried_object_id();
+$slug = get_last_url_slug();
+?>
 <div class="relative mx-2 md:mx-16 lg:mx-[120px] breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
     <?php if (function_exists('bcn_display')) {
         bcn_display();
@@ -8,7 +11,7 @@
     <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16"><?php post_type_archive_title() ?></h1>
 
 
-    <?php print_category_terms('photo-category') ?>
+    <?php print_category_terms('photo-category', $slug) ?>
     <!-- <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a><span>|</span></h3>
         <h3><a href="/joanna-helander/photos/motives">Portraits</a> <span>|</span></h3>
         <h3><a href="/joanna-helander/photos/writers">Writers</a> <span>|</span></h3>
@@ -22,19 +25,7 @@
 
 
 
-            <?php while (have_posts()) : the_post(); ?>
-
-                <?php
-                $term = get_field('test');
-                if ($term) : ?>
-                    <h2>Term name: <?php echo esc_html($term->name); ?></h2>
-                    <p>Term color: <?php the_field('color', $term); ?></p>
-                <?php endif; ?>
-
-                <?php
-
-
-
+            <?php while (have_posts()) : the_post();
                 $image = get_field('photography');
                 if ($image) :
 
@@ -52,7 +43,7 @@
                     $thumb = $image['sizes'][$size];
                     $width = $image['sizes'][$size . '-width'];
                     $height = $image['sizes'][$size . '-height'];
-                ?>
+            ?>
                     <div class="card flex flex-col w-[48%] lg:w-[30%] shrink-0 mb-3 md:mb-20 cursor-pointer">
                         <img class="gallery-img object-cover aspect-square w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" onclick="openDisplay(this)" />
                         <h3 class="font-bold text-mobileP lg:text-desktopP md:text-tabletP"> <?= the_title(); ?></h3>
