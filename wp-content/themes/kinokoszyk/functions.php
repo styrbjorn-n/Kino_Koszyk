@@ -46,15 +46,15 @@ function print_menu_items($menu)
     }
 };
 
-function print_partner_items($number)
+function print_partner_items($number, $post_id = 953)
 {
-    if (get_field('partner_link_' . $number) && get_field('partner_logo_' . $number)) {
-        $image = get_field('partner_logo_' . $number);
+    if (get_field('partner_link_' . $number, $post_id) && get_field('partner_logo_' . $number, $post_id)) {
+        $image = get_field('partner_logo_' . $number, $post_id);
         $alt = $image['alt'];
         $size = 'large';
         $thumb = $image['sizes'][$size];
 
-        echo '<a href="' . get_field('partner_link_' . $number) . '"><img src="' . esc_url($thumb) . '" alt="' . esc_attr($alt) . '"></a>';
+        echo '<a href="' . get_field('partner_link_' . $number, $post_id) . '"><img src="' . esc_url($thumb) . '" alt="' . esc_attr($alt) . '"></a>';
     }
 };
 

@@ -6,7 +6,6 @@
             bcn_display();
         } ?>
     </div>
-
     <!-- THIS IS NOT THE CORRECT STYLED MENU, ONLY FOR PLACE HOLDER -->
     <?php wp_nav_menu(array(
         'theme_location' => 'joanna-sub-menu',
@@ -20,10 +19,18 @@
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
         <div class="">
             <?php while (have_posts()) : the_post(); ?>
-                <h3><?= get_field('exhibition_name'); ?></h3>
-                <h3><?= get_field('exhibition_year'); ?></h3>
-                <h3><?= get_field('exhibition_location'); ?></h3>
-                <p><?= get_field('exhibition_description'); ?></p>
+                <div class="flex flex-row">
+                    <div>
+                        <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
+                    </div>
+                    <div>
+
+                        <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_name'); ?></h4>
+                        <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_location'); ?></p>
+
+                        <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
+                    </div>
+                </div>
             <?php endwhile; ?>
         </div>
 
