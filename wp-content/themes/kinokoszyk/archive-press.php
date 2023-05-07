@@ -20,10 +20,11 @@
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
         <div class="">
             <?php while (have_posts()) : the_post(); ?>
-                <h3><?= get_field('exhibition_name'); ?></h3>
-                <h3><?= get_field('exhibition_year'); ?></h3>
-                <h3><?= get_field('exhibition_location'); ?></h3>
-                <p><?= get_field('exhibition_description'); ?></p>
+                <h2><?= the_title(); ?></h2>
+                <h3><?= get_field('press_item_year'); ?></h3>
+                <h3><?= get_field('press_item_description'); ?></h3>
+                <a href="<?= the_field('press_item_link'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Read here </button class=""></a>
+                <!-- press LINK -->
             <?php endwhile; ?>
         </div>
 
