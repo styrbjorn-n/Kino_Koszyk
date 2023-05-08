@@ -560,7 +560,7 @@ class bcn_breadcrumb_trail
 		$breadcrumb = $this->add(new bcn_breadcrumb(
 			$term->name,
 			$this->opt['Htax_' . $term->taxonomy . '_template_no_anchor'],
-			array('archive', 'taxonomy', $term->taxonomy, 'current-item'),
+			array('archive', 'taxonomy', $term->taxonomy, 'current-item text-primary'),
 			$this->maybe_add_post_type_arg(get_term_link($term), null, $term->taxonomy),
 			$term->term_id
 		));

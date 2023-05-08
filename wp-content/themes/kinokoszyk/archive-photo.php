@@ -1,7 +1,5 @@
 <?php get_header();
-$currentPageIdMenu = get_queried_object_id();
-$slug = get_last_url_slug();
-?>
+$slug = get_last_url_slug(); ?>
 <style>
 
 </style>
@@ -15,11 +13,6 @@ $slug = get_last_url_slug();
 
 
     <?php print_category_terms('photo-category', $slug) ?>
-    <!-- <h3><a class="font-bold text-secondary" href="/joanna-helander/photos/">All </a><span>|</span></h3>
-        <h3><a href="/joanna-helander/photos/motives">Portraits</a> <span>|</span></h3>
-        <h3><a href="/joanna-helander/photos/writers">Writers</a> <span>|</span></h3>
-        <h3><a href="/joanna-helander/photos/artists">Artists</a> </h3>
-        <h3><a href="/joanna-helander/photos/artists">Artists</a> </h3> -->
     </div>
 
     <?php if (have_posts()) : ?>
