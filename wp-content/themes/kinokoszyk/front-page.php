@@ -22,7 +22,7 @@
 
             <?php
             $args = array(
-                'post_type' => 'archive',
+                'post_type' => 'custom-archive',
                 'posts_per_page' => 1,
                 'orderby' => 'date',
                 'order' => 'DESC',
