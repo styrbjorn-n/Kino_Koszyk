@@ -13,8 +13,6 @@
         </div>
     </article>
 
-    <!-- HÄR SKA EN POST FRÅN "ARCHIVE" IN -->
-
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
         <h3 class="mb-10 font-semibold text-desktopH2">Partners</h3>
         <div class="h-30 w-full flex flex-wrap md:justify-between">
@@ -46,10 +44,10 @@
                 'order' => 'DESC',
             );
 
-            $archive_item_query = new WP_Query($args);
+            $exhibition_item_query = new WP_Query($args);
 
-            if ($archive_item_query->have_posts()) :
-                while ($archive_item_query->have_posts()) : $archive_item_query->the_post();
+            if ($exhibition_item_query->have_posts()) :
+                while ($exhibition_item_query->have_posts()) : $exhibition_item_query->the_post();
             ?>
                     <div class="flex flex-row">
                         <div>

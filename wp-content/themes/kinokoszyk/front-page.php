@@ -68,6 +68,7 @@
     </article>
 
 
+
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
         <h3 class="mb-10 font-semibold text-desktopH2">Our partners</h3>
         <div class="h-30 w-full flex flex-wrap md:justify-between">

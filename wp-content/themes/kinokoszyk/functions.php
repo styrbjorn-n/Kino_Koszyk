@@ -99,18 +99,20 @@ add_action('wp_enqueue_scripts', 'load_tailwind');
 
 function create_posttype()
 {
-
     register_post_type(
-        'film',
+        'custom-archive',
         array(
             'labels' => array(
-                'name' => __('Films'),
-                'singular_name' => __('Film'),
+                'name' => __('Archive'),
+                'singular_name' => __('Archive Item'),
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'films'),
-            'menu_icon' => 'dashicons-format-video',
+            'menu_position' => 4,
+            'menu_order' => 10,
+
+            'rewrite' => array('slug' => 'archive'),
+            'menu_icon' => 'dashicons-media-document',
         )
     );
     register_post_type(
@@ -122,47 +124,10 @@ function create_posttype()
             ),
             'public' => true,
             'has_archive' => true,
+            'menu_position' => 5,
+            'menu_order' => 10,
             'rewrite' => array('slug' => 'joanna-helander/books'),
             'menu_icon' => 'dashicons-book',
-        )
-    );
-    register_post_type(
-        'photo',
-        array(
-            'labels' => array(
-                'name' => __('Photos'),
-                'singular_name' => __('Photo'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'joanna-helander/photos'),
-            'menu_icon' => 'dashicons-images-alt',
-        )
-    );
-    register_post_type(
-        'custom-archive',
-        array(
-            'labels' => array(
-                'name' => __('Archive'),
-                'singular_name' => __('Archive Item'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'archive'),
-            'menu_icon' => 'dashicons-media-document',
-        )
-    );
-    register_post_type(
-        'press',
-        array(
-            'labels' => array(
-                'name' => __('Press'),
-                'singular_name' => __('Press Item'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'joanna-helander/press'),
-            'menu_icon' => 'dashicons-media-document',
         )
     );
     register_post_type(
@@ -174,8 +139,55 @@ function create_posttype()
             ),
             'public' => true,
             'has_archive' => true,
+            'menu_position' => 6,
+            'menu_order' => 10,
             'rewrite' => array('slug' => 'joanna-helander/exhibitions'),
             'menu_icon' => 'dashicons-admin-page',
+        )
+    );
+    register_post_type(
+        'film',
+        array(
+            'labels' => array(
+                'name' => __('Films'),
+                'singular_name' => __('Film'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 7,
+            'menu_order' => 10,
+            'rewrite' => array('slug' => 'films'),
+            'menu_icon' => 'dashicons-format-video',
+        )
+    );
+    register_post_type(
+        'photo',
+        array(
+            'labels' => array(
+                'name' => __('Photos'),
+                'singular_name' => __('Photo'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 8,
+            'menu_order' => 10,
+            'rewrite' => array('slug' => 'joanna-helander/photos'),
+            'menu_icon' => 'dashicons-images-alt',
+        )
+    );
+    register_post_type(
+        'press',
+        array(
+            'labels' => array(
+                'name' => __('Press'),
+                'singular_name' => __('Press Item'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 9,
+            'menu_order' => 10,
+            'rewrite' => array('slug' => 'joanna-helander/press'),
+            'menu_icon' => 'dashicons-media-document',
         )
     );
 }
