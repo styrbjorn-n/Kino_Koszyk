@@ -20,19 +20,16 @@
             <div class="flex flex-nowrap md:gap-2 lg:gap-8 w-full justify-between">
                 <div class="flex gap-0 md:gap-12 justify-between max-sm:pr-1">
                     <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
-
-                    <div class="primary-menu w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2 ">
+                    <div class="primary-menu font-bold w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2 ">
                         <div class="primary-menu w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
-                            <!-- writes out the menu items specific to the selected menu -->
-                            <?php wp_nav_menu(array(
-                                'theme_location' => 'primary-menu', // pages needed: joanna and home or kino
-                                'container' => false,
-                                'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-                                'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row items-center h-full justify-center mb:gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-                                'add_li_class' => 'hover:text-hover text-desktopLink',
-                                'after' => '<span class="max-sm:mr-[8px] sm:mx-[12px] text-primary"> | </span>'
-                            )) ?>
+                            <?php
 
+                            if (is_joanna_page()) {
+                                echo '<a  href="/" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink">' . "Go to Kino Koszyk"  . '</a>';
+                            } else {
+                                echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink"> Go to Joanna Helander </a>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
