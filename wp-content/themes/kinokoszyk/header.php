@@ -19,21 +19,21 @@
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full lg:justify-between">
             <div class="flex flex-nowrap md:gap-2 lg:gap-8 w-full justify-between">
                 <div class="flex gap-0 md:gap-12 justify-between max-sm:pr-1">
-                    <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12"></a>
+                    <a href="<?= home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk Logo" class="w-12 "></a>
                     <div class="primary-menu font-bold w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2 ">
-                        <div class="primary-menu w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
+                        <div class="primary-menux w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
                             <?php
 
                             if (is_joanna_page()) {
-                                echo '<a  href="/" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink">' . "Go to Kino Koszyk"  . '</a>';
+                                echo '<a  href="/" class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopLink">' . "Go to Kino Koszyk"  . '</a>';
                             } else {
-                                echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink"> Go to Joanna Helander </a>';
+                                echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopLink"> Go to Joanna Helander </a>';
                             }
                             ?>
                         </div>
                     </div>
                 </div>
-                <div id="nav-links" class="flex flex-col absolute bg-white z-20 top-0 left-[-100%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
+                <div id="nav-links" class="flex flex-col absolute items-start bg-white z-20 top-0 left-[-100%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
 
                     <?php
 
@@ -45,7 +45,7 @@
                     wp_nav_menu(array(
                         'theme_location' => $menu,
                         'container' => false,
-                        'menu_class' => 'nav-menu-list flex flex-col items-center h-full justify-evenly font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
+                        'menu_class' => 'nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
                         'add_li_class' => 'hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink'
                     ));
                     ?>
