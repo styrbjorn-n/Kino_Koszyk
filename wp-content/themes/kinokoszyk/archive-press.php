@@ -39,8 +39,6 @@ $segments = get_url_segments();
                 ?>
             </div>
         </section>
-
-    <?php endif; ?>
     </section>
 
     <?php get_footer(); ?>
