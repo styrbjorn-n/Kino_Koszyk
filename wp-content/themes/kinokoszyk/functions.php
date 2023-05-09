@@ -54,7 +54,7 @@ function print_partner_items($number, $post_id = 953)
         $size = 'large';
         $thumb = $image['sizes'][$size];
 
-        echo '<a href="' . get_field('partner_link_' . $number, $post_id) . '"><img src="' . esc_url($thumb) . '" alt="' . esc_attr($alt) . '"></a>';
+        echo '<a class="lg:max-w-[148px] " href="' . get_field('partner_link_' . $number, $post_id) . '"><img src="' . esc_url($thumb) . '" alt="' . esc_attr($alt) . '"></a>';
     }
 };
 
