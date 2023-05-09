@@ -35,6 +35,33 @@ function get_last_url_slug()
     return $last_segment;
 }
 
+function active_menu_link($needle, $haystack)
+{
+    // if (array_key_exists($needle,)) {
+    //     # code...
+    // }
+    // if (!array_search($needle, $haystack, false)) {
+    //     echo "<br>else</br>";
+    // } else {
+    //     echo "text-red-600";
+    // }
+    if (in_array(strtolower($needle), $haystack)) {
+        echo "text-red-600";
+    } else {
+        echo "<br>else</br>";
+    }
+};
+
+
+
+function get_url_segments()
+{
+    $current_url = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+    $path = parse_url($current_url, PHP_URL_PATH);
+    $segments = explode('/', rtrim($path, '/'));
+    return $segments;
+}
+
 add_action("init", "get_last_url_slug");
 
 function print_menu_items($menu)

@@ -1,3 +1,11 @@
+<?php
+$joanna_menu = wp_get_nav_menu_items('joanna-header-menu');
+$kino_menu = wp_get_nav_menu_items('kino-header-menu');
+$segments = get_url_segments();
+$current_page_id = get_queried_object_id();
+$queried_object = get_queried_object();
+$slug = get_last_url_slug();
+?>
 <!DOCTYPE html>
 <html class="m-0 text-primary bg-[#FEFEFE]" <?php language_attributes(); ?>>
 
@@ -14,6 +22,7 @@
 </head>
 
 <body>
+    <?php wp_body_open(); ?>
     <header class="font-heading mb-16 py-6 lg:px-6 px-2 md:px-3 sticky top-0 bg-white z-10 w-full">
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full lg:justify-between">
@@ -23,8 +32,7 @@
                     <div class="primary-menu font-bold w-full lg:w-fit z-20 lg:z-0 justify-self-stretch max-md:ml-2 ">
                         <div class="primary-menux w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
                             <?php
-
-                            if (is_joanna_page()) {
+                            if (in_array("joanna-helander", $segments)) {
                                 echo '<a  href="/" class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopLink">' . "Go to Kino Koszyk"  . '</a>';
                             } else {
                                 echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopLink"> Go to Joanna Helander </a>';
@@ -35,20 +43,32 @@
                 </div>
                 <div id="nav-links" class="flex flex-col absolute items-start bg-white z-20 top-0 left-[-100%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
 
-                    <?php
+                    <div class="nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8">
+                        <?php
+                        if (in_array("joanna-helander", $segments)) {
+                        ?>
+                            <?php if ($joanna_menu) foreach ($joanna_menu as $link) : ?>
 
-                    if (is_joanna_page()) {
-                        $menu = 'joanna-menu';
-                    } else {
-                        $menu = 'kino-menu';
-                    }
-                    wp_nav_menu(array(
-                        'theme_location' => $menu,
-                        'container' => false,
-                        'menu_class' => 'nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
-                        'add_li_class' => 'hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink'
-                    ));
-                    ?>
+                                <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
+                            <?php endforeach; ?>
+                        <?
+                        } else {
+                        ?>
+
+                            <?php if ($kino_menu) foreach ($kino_menu as $link) : ?>
+                                <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink <?php active_menu_link($link->title, $segments) ?>" href="<?= $link->url; ?>"><?= $link->title; ?></a>
+                            <?php endforeach; ?>
+                    </div>
+                <?
+
+                        }
+                        // wp_nav_menu(array(
+                        //     'theme_location' => $menu,
+                        //     'container' => false,
+                        //     'menu_class' => 'nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
+                        //     'add_li_class' => 'hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink'
+                        // ));
+                ?>
                 </div>
                 <div onclick="onToggleMenu(this)" class="w-[30px] h-[30px] cursor-pointer lg:hidden z-20 lg:z-0">
                     <div id="line-container" class="w-full h-full space-y-2">

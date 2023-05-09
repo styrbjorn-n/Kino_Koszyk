@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php get_header();
+$slug = get_last_url_slug();
+$joanna_sub_menu = wp_get_nav_menu_items('joanna-sub-menu');
+$segments = get_url_segments();
+// <div class="xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row flex-wrap items-start h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden">
+?>
 
 <?php if (have_posts()) : ?>
     <div class="flex relative mx-2 md:mx-16 lg:mx-[120px] breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -7,14 +12,10 @@
         } ?>
     </div>
     <!-- THIS IS NOT THE CORRECT STYLED MENU, ONLY FOR PLACE HOLDER -->
-    <?php wp_nav_menu(array(
-        'theme_location' => 'joanna-sub-menu',
-        'container' => false,
-        'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row items-center h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-        'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-row items-center h-full justify-center mb:gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-        'add_li_class' => 'hover:text-hover text-desktopLink',
-        'after' => '<span class="max-sm:mr-[8px] sm:mx-[12px] text-primary"> | </span>'
-    )) ?>
+    <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
+
+        <a title="<?= $link->title; ?>" class="hover:text-hover text-desktopH2 <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
+    <?php endforeach; ?>
 
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
         <div class="">

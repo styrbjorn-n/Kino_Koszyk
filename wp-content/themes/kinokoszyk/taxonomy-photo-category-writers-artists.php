@@ -6,7 +6,7 @@ $slug = get_last_url_slug(); ?>
     } ?>
 </div>
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-    <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16"><?php post_type_archive_title() ?></h1>
+    <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16">Photos</h1>
     <?php print_category_terms('photo-category', $slug) ?>
 
     <?php if (have_posts()) : ?>

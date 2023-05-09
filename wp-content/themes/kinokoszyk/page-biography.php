@@ -1,5 +1,8 @@
 <?php get_header();
 $slug = get_last_url_slug();
+$joanna_sub_menu = wp_get_nav_menu_items('joanna-sub-menu');
+$segments = get_url_segments();
+
 ?>
 
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
@@ -8,15 +11,13 @@ $slug = get_last_url_slug();
             bcn_display();
         } ?>
     </div>
+    <div class="primary-menu-list flex lg:text-desktopH2 md:text-tabletH2 sm:text-mobileH2 flex-row flex-wrap items-start h-full max-md:justify-center font-bold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
+        <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
 
-    <!-- THIS IS NOT THE CORRECT STYLED MENU, ONLY FOR PLACE HOLDER -->
+            <a title="<?= $link->title; ?>" class="hover:text-hover <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= strtoupper($link->title); ?></a>
+        <?php endforeach; ?>
+    </div>
 
-    <?php wp_nav_menu(array(
-        'theme_location' => 'joanna-sub-menu',
-        'container' => false,
-        'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-col flex-wrap items-start h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
-        'add_li_class' => 'hover:text-hover text-desktopH2',
-    )) ?>
     <div class="w-full">
         <div class="w-full h-full max-md:mt-4">
             <?php
