@@ -193,6 +193,13 @@ function create_posttype()
 }
 add_action('init', 'create_posttype');
 
+function custom_post_type_pagination($query)
+{
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('custom-archive')) {
+        $query->set('posts_per_page', 6);
+    }
+}
+add_action('pre_get_posts', 'custom_post_type_pagination');
 
 function load_js()
 {
