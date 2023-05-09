@@ -17,15 +17,48 @@ $slug = get_last_url_slug();
         'menu_class' => 'xs:whitespace-nowrap xs:flex-col primary-menu-list flex flex-col flex-wrap items-start h-full max-md:justify-center lg:ml-6 gap-2 font-bold lg:justify-start [&>li:nth-child(2)>span]:hidden ',
         'add_li_class' => 'hover:text-hover text-desktopH2',
     )) ?>
-
-
     <div class="w-full">
-        <img class="w-full h-full shrink-0" src="<?= get_template_directory_uri(); ?>/src/biography.png" alt="Joanna Helander">
-    </div>
-    <h2 class="font-heading font-bold lg:text-desktopH2 md:text-tabletH2 max-md:text-mobileH2 mt-16 max-md:mt-4"><?php the_field('biography_header') ?></h2>
-    <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:text-mobileH4 font-bold mt-2"><?php the_field('biography_subheader') ?></h4>
-    <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text mt-6 max-w-[712px]"><?php the_field('biography_paragraph') ?></p>
+        <div class="w-full h-full max-md:mt-4">
+            <?php
+            $image = get_field('biography_top_image');
+            if ($image) {
 
+                $title = $image['title'];
+                $alt = $image['alt'];
+
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+            };
+            ?>
+            <img class="object-fill w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+
+
+        </div>
+    </div>
+    <section class="flex flex-row">
+
+        <div>
+            <h2 class="font-heading font-bold lg:text-desktopH2 md:text-tabletH2 max-md:text-mobileH2 mt-16 max-md:mt-4"><?php the_field('biography_header') ?></h2>
+            <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:text-mobileH4 font-bold mt-2"><?php the_field('biography_subheader') ?></h4>
+            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text mt-6 max-w-[712px]"><?php the_field('biography_paragraph') ?></p>
+            <a href="<?php the_field('biography_link_1'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Photos</button></a>
+            <a href="<?php the_field('biography_link_2'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Books</button></a>
+        </div>
+        <div class="w-full h-full max-md:mt-4">
+            <?php
+            $image = get_field('biography_side_image');
+            if ($image) {
+
+                $title = $image['title'];
+                $alt = $image['alt'];
+
+                $size = 'large';
+                $thumb = $image['sizes'][$size];
+            };
+            ?>
+            <img class="object-fill w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+        </div>
+    </section>
 </section>
 
 <?php get_footer(); ?>
