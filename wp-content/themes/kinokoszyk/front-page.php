@@ -4,7 +4,7 @@
     <div class="w-full">
         <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 max-sm:text-mobileH1 sm:text-mobileH1 font-black relative z-1"><span class="text-red-600">KINO </span><span>KOSZYK</span></h1>
         <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"> Documentary filmmakers </h2>
-        <img class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/hero.jpg" alt="">
+        <video autoplay loop muted class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/front-page.mp4"></video>
     </div>
 
     <article class="mt-16 h-fit flex flex-col md:flex-row md:gap-4">
