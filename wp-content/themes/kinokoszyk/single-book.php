@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <section class="mx-2 md:mx-16 lg:mx-[120px]">
     <div class="flex relative breadcrumbs uppercase font-text text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
         <?php if (function_exists('bcn_display')) {
@@ -25,81 +24,53 @@
             <?php
             $link = get_field('book_link');
             $linkText = get_field('book_link_text');
-            if ($link && $linkText) :
-            ?>
+            if ($link && $linkText) : ?>
                 <a href="<?php the_field('book_link'); ?>"><button class="bg-buttonRed px-2 h-11 text-white"><?php the_field('book_link_text'); ?> </button class=""></a>
             <?php endif; ?>
         </div>
 
         <div class="basis-1/2">
             <?php
-            $image = get_field('book_cover_image');
+            $image = get_field('book_image');
             if ($image) :
-
                 $alt = $image['alt'];
-
-                // Thumbnail size attributes.
                 $size = 'large';
-                $thumb = $image['sizes'][$size];
-                $width = $image['sizes'][$size . '-width'];
-                $height = $image['sizes'][$size . '-height']; ?>
+                $thumb = $image['sizes'][$size]; ?>
                 <img class="object-cover shadow-book w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
-
-
         </div>
-        <div class="">
 
+        <div>
             <?php
             $image = get_field('book_image_1');
             if ($image) :
-
                 $alt = $image['alt'];
-
-                // Thumbnail size attributes.
                 $size = 'large';
-                $thumb = $image['sizes'][$size];
-                $width = $image['sizes'][$size . '-width'];
-                $height = $image['sizes'][$size . '-height']; ?>
+                $thumb = $image['sizes'][$size]; ?>
                 <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
             <?php
             $image = get_field('book_image_2');
             if ($image) :
-
                 $alt = $image['alt'];
-
-                // Thumbnail size attributes.
                 $size = 'large';
-                $thumb = $image['sizes'][$size];
-                $width = $image['sizes'][$size . '-width'];
-                $height = $image['sizes'][$size . '-height']; ?>
+                $thumb = $image['sizes'][$size]; ?>
                 <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
             <?php
             $image = get_field('book_image_3');
             if ($image) :
-
                 $alt = $image['alt'];
-
-                // Thumbnail size attributes.
                 $size = 'large';
-                $thumb = $image['sizes'][$size];
-                $width = $image['sizes'][$size . '-width'];
-                $height = $image['sizes'][$size . '-height']; ?>
+                $thumb = $image['sizes'][$size]; ?>
                 <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
             <?php
             $image = get_field('book_image_4');
             if ($image) :
-
                 $alt = $image['alt'];
-
-                // Thumbnail size attributes.
                 $size = 'large';
-                $thumb = $image['sizes'][$size];
-                $width = $image['sizes'][$size . '-width'];
-                $height = $image['sizes'][$size . '-height']; ?>
+                $thumb = $image['sizes'][$size]; ?>
                 <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
