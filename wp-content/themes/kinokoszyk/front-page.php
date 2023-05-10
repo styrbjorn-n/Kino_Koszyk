@@ -17,7 +17,7 @@
 
     <!-- ARCHIVE ITEM POST ON THE FRONT-PAGE.PHP -->
     <article>
-        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl">Archive</h2>
+        <h2 class="lg:text-desktopH2 md:text-4xl text-mobileH2 font-semibold my-4 ">Archive</h2>
         <div class="flex flex-row">
 
             <?php

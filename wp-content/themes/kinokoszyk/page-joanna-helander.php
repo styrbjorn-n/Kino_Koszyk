@@ -13,27 +13,9 @@
         </div>
     </article>
 
-    <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
-        <h3 class="mb-10 font-semibold text-desktopH2">Partners</h3>
-        <div class="h-30 w-full flex flex-wrap md:justify-between">
 
-            <?php
-            print_partner_items(1);
-            print_partner_items(2);
-            print_partner_items(3);
-            print_partner_items(4);
-            print_partner_items(5);
-            print_partner_items(6);
-            print_partner_items(7);
-            print_partner_items(8);
-            print_partner_items(9);
-            print_partner_items(10);
-            ?>
-
-        </div>
-    </article>
     <article>
-        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl">Next Exhibition/latest exhibition</h2>
+        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl text-mobileH2">Next Exhibition/latest exhibition</h2>
         <div class="flex flex-row">
 
             <?php
@@ -67,6 +49,26 @@
                 wp_reset_postdata();
             endif; ?>
         </div>
+        </div>
+    </article>
+
+    <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
+        <h3 class="mb-10 font-semibold text-desktopH2">Partners</h3>
+        <div class="h-30 w-full flex flex-wrap md:justify-between">
+
+            <?php
+            print_partner_items(1);
+            print_partner_items(2);
+            print_partner_items(3);
+            print_partner_items(4);
+            print_partner_items(5);
+            print_partner_items(6);
+            print_partner_items(7);
+            print_partner_items(8);
+            print_partner_items(9);
+            print_partner_items(10);
+            ?>
+
         </div>
     </article>
 
