@@ -10,26 +10,16 @@
         <h1 class="mt-0 uppercase font-black lg:mb-16 lg:text-desktopH1 md:text-tabletH1 text-mobileH1"><?php post_type_archive_title(); ?></h1>
 
         <div class="w-full flex flex-wrap justify-start lg:gap-14 gap-1">
-            <!-- This is a card in the grid -->
             <?php while (have_posts()) : the_post(); ?>
-                <?php
-                $image = get_field('book_image');
+
+                <?php $image = get_field('book_image');
                 if ($image) :
-
-                    // Image variables.
-                    // $url = the_permalink();
                     $title = $image['title'];
-                    $alt = $image['title'];
+                    $alt = $image['alt'];
                     $caption = $image['caption'];
-
-                    // Thumbnail size attributes.
                     $size = 'large';
-                    $thumb = $image['sizes'][$size];
-                    $width = $image['sizes'][$size . '-width'];
-                    $height = $image['sizes'][$size . '-height'];
-                ?>
+                    $thumb = $image['sizes'][$size]; ?>
 
-                    <!-- What's being showed -->
                     <div class="flex flex-col w-[48%] lg:w-[30%] font-text mb-16">
                         <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
                             <img class="object-fill shadow-book hover:border-2 aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
@@ -37,10 +27,7 @@
                         <a class="font-bold text-mobileP lg:text-desktopP md:text-tabletP" href=<?php the_permalink() ?>> <?= the_title(); ?></a>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
                     </div>
-
                 <?php endif; ?>
-
-                <!-- EOF: card in the grid -->
             <?php endwhile; ?>
         </div>
         <section class="font-text flex text-desktopP flex-row justify-center">
@@ -52,8 +39,6 @@
                 ?>
             </div>
         </section>
-
-        <!-- EOF: the grid -->
     <?php endif; ?>
     </section>
 

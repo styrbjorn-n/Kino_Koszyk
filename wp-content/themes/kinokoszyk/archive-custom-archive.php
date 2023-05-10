@@ -35,24 +35,14 @@ endif; ?>
                         <?php
                         $image1 = get_field('archive_item_image_1');
                         if ($image1) :
-
-                            // Image variables.
-                            // $url = the_permalink();
                             $title = $image1['title'];
-                            $alt = $image1['title'];
+                            $alt = $image1['alt'];
                             $caption = $image1['caption'];
-
-                            // Thumbnail size attributes.
                             $size = 'large';
-                            $thumb = $image1['sizes'][$size];
-                            $width = $image1['sizes'][$size . '-width'];
-                            $height = $image1['sizes'][$size . '-height']; ?>
-
+                            $thumb = $image1['sizes'][$size]; ?>
                             <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
-
                         <?php endif; ?>
                         <hr class="border-black my-28 border-2">
-                        <!-- EOF: card in the grid -->
                     <?php endwhile; ?>
                     </div>
 
@@ -68,8 +58,6 @@ endif; ?>
                                 ?>
                             </div>
                         </section>
-
-                        <!-- EOF: the grid -->
                     <?php endif; ?>
                     </section>
 
