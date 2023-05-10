@@ -19,23 +19,40 @@ $segments = get_url_segments();
     </div>
 
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-        <div class="">
+        <section class=" w-3/5 ">
             <?php while (have_posts()) : the_post(); ?>
-                <div class="flex flex-row">
-                    <div>
-                        <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
-                    </div>
-                    <div>
+                <?php if (strtotime(get_field('exhibition_date')) > strtotime(date('Fj,Y'))) : ?>
+                    <h4 class="lg:text-desktopH4 font-text font-semibold mt-16 md:text-4xl">NEXT</h4>
+                    <hr class="border-black mt-4 mb-16 border-2">
 
-                        <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_name'); ?></h4>
-                        <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_location'); ?></p>
+                    <article class="flex flex-row">
+                        <div>
+                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_date'); ?></h4>
+                        </div>
 
-                        <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
-                    </div>
-                </div>
+                        <div>
+                            <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_name'); ?></h4>
+                            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_location'); ?></p>
+                            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
+                        </div>
+                    </article>
+                <?php else : ?>
+                    <h4 class="lg:text-desktopH4 font-text font-semibold mt-28 md:text-4xl">PAST</h4>
+                    <hr class="border-black mt-4 mb-16 border-2">
+                    <article class="flex flex-row">
+                        <div>
+                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_date'); ?></h4>
+                        </div>
+
+                        <div>
+                            <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_name'); ?></h4>
+                            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_location'); ?></p>
+                            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
+                        </div>
+                    </article>
+                <?php endif; ?>
             <?php endwhile; ?>
-        </div>
-
+        </section>
 
         <section class="font-text flex text-desktopP flex-row justify-center">
             <div class="mx-2 mt-2 mb-28 ">
