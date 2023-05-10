@@ -41,9 +41,9 @@ $slug = get_last_url_slug();
                         </div>
                     </div>
                 </div>
-                <div id="nav-links" class="flex flex-col absolute items-start bg-white z-20 top-0 left-[-120%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
+                <div id="nav-links" class="flex flex-col absolute items-start bg-white z-20 top-0 left-[-120%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit ">
 
-                    <div class="nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8">
+                    <div class="nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8 lg:mt-0 mt-6">
                         <?php
                         if (in_array("joanna-helander", $segments)) {
                         ?>
