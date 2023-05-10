@@ -36,7 +36,7 @@
                         <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= the_title(); ?></h4>
                         <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text max-w-[712px]"><b><?php the_field('archive_item_year'); ?></b></p>
                         <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= wp_trim_words(get_field('archive_item_paragraph'), 35); ?></p>
-                        <a href="<?= get_post_type_archive_link('custom-archive'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Read more</button></a>
+                        <a href="<?= get_post_type_archive_link('custom-archive'); ?>"><button class="mt-2 text-center bg-buttonRed px-2 h-8 w-flex-grow text-white font-text">Read more</button></a>
 
                     </div>
                     <div class="basis-1/2">

@@ -25,7 +25,7 @@
             $link = get_field('book_link');
             $linkText = get_field('book_link_text');
             if ($link && $linkText) : ?>
-                <a href="<?php the_field('book_link'); ?>"><button class="bg-buttonRed px-2 h-11 text-white"><?php the_field('book_link_text'); ?> </button class=""></a>
+                <a href="<?php the_field('book_link'); ?>"><button class="mt-2 text-center bg-buttonRed px-2 h-8 w-flex-grow text-white font-text"><?php the_field('book_link_text'); ?> </button class=""></a>
             <?php endif; ?>
         </div>
 
