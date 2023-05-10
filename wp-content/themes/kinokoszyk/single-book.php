@@ -39,42 +39,54 @@
                 <img class="object-cover shadow-book w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
+    </section>
 
-        <div>
+    <section class="my-16 flex flex-row gap-4">
+
+        <div class="max-w-[1/4]">
             <?php
             $image = get_field('book_image_1');
             if ($image) :
                 $alt = $image['alt'];
                 $size = 'large';
                 $thumb = $image['sizes'][$size]; ?>
-                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
+        </div>
+        <div class="max-w-[1/4]">
+
             <?php
             $image = get_field('book_image_2');
             if ($image) :
                 $alt = $image['alt'];
                 $size = 'large';
                 $thumb = $image['sizes'][$size]; ?>
-                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
+        </div>
+        <div class="max-w-[1/4]">
+
             <?php
             $image = get_field('book_image_3');
             if ($image) :
                 $alt = $image['alt'];
                 $size = 'large';
                 $thumb = $image['sizes'][$size]; ?>
-                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <img class="  object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
+        </div>
+        <div class="max-w-[1/4]">
+
             <?php
             $image = get_field('book_image_4');
             if ($image) :
                 $alt = $image['alt'];
                 $size = 'large';
                 $thumb = $image['sizes'][$size]; ?>
-                <img class="object-cover w-1/4 " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
-
     </section>
 </section>
+
 <?php get_footer(); ?>
