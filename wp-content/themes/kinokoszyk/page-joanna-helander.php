@@ -33,7 +33,7 @@
         </div>
     </article>
     <article>
-        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl">Next Exhibition/latest exhibition</h2>
+        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl text-mobileH2">Next Exhibition/latest exhibition</h2>
         <div class="flex flex-row">
 
             <?php
