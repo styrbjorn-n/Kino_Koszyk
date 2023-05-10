@@ -40,5 +40,5 @@ $segments = get_url_segments();
             </div>
         </section>
     </section>
-
-    <?php get_footer(); ?>
+</section>
+<?php get_footer(); ?>
