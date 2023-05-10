@@ -26,7 +26,7 @@ tailwind.config = {
         desktopH2: ['46px', '56px'],
         desktopH3: ['38px', '46px'],
         desktopH4: ['30px', '150%'],
-        desktopLink: ['28px', '28px'],
+        desktopLink: ['20px', '26px'],
         desktopP: ['24px', '150%'],
         
         tabletMenu: ['40px', '150%'],

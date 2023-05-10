@@ -6,12 +6,12 @@ $segments = get_url_segments();
 ?>
 
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-    <div class="flex relative breadcrumbs font-text uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <div class="flex relative breadcrumbs font-text font-thin uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
         <?php if (function_exists('bcn_display')) {
             bcn_display();
         } ?>
     </div>
-    <div class="primary-menu-list flex flex-col text-mobileH2 md:text-tabletH2 lg:text-desktopH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-bold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
+    <div class="primary-menu-list flex flex-col text-mobileH2 md:text-tabletH2 lg:text-desktopH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-semibold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
         <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
 
             <a title="<?= $link->title; ?>" class="hover:text-hover <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= strtoupper($link->title); ?></a>
