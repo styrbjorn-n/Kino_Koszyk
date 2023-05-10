@@ -11,7 +11,7 @@ $segments = get_url_segments();
             bcn_display();
         } ?>
     </div>
-    <div class="primary-menu-list flex lg:text-desktopH2 md:text-tabletH2 sm:text-mobileH2 flex-row flex-wrap items-start h-full max-md:justify-center font-bold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
+    <div class="primary-menu-list flex flex-col lg:text-desktopH2 md:text-tabletH2 text-mobileH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-bold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
         <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
 
             <a title="<?= $link->title; ?>" class="hover:text-hover <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= strtoupper($link->title); ?></a>
