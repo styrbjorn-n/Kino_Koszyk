@@ -23,7 +23,7 @@ $slug = get_last_url_slug();
 
 <body>
     <?php wp_body_open(); ?>
-    <header class="font-heading mb-16 py-6 lg:px-6 px-2 md:px-3 sticky top-0 bg-white z-10 w-full">
+    <header class="font-heading lg:mb-16 md:mb-4 sm:mb-2 py-6 lg:px-6 px-2 md:px-3 sticky top-0 bg-white z-10 w-full">
         <!-- a nav solution -->
         <nav class="burger-menu flex flex-row items-center flex-nowrap w-full lg:justify-between">
             <div class="flex flex-nowrap md:gap-2 lg:gap-8 w-full justify-between">
