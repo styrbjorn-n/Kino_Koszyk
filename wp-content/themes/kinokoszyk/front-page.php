@@ -7,17 +7,17 @@
         <video autoplay loop muted class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/front-page.mp4"></video>
     </div>
 
-    <article class="flex flex-col md:flex-row mt-4 md:mt-16 h-fit md:gap-4">
+    <article class="flex flex-col md:flex-row mt-4 md:mt-16 md:mb-16 h-fit md:gap-4">
         <div class="md:w-2/3">
             <h2 class="font-heading font-semibold text-mobileH2 lg:text-desktopH2 md:text-tabletH2 mb-4"><?php the_field('front_page_header') ?></h2>
             <p class="text-mobileP lg:text-desktopP md:text-tabletP font-text"><?php the_field('front_page_description'); ?></p>
         </div>
-        <img class="invisible md:visible w-full self-center md:w-1/3 md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
+        <img class="h-0 md:h-full w-full self-center md:w-1/3 md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
 
     <!-- ARCHIVE ITEM POST ON THE FRONT-PAGE.PHP -->
     <article>
-        <h2 class="lg:text-desktopH2 md:text-4xl text-mobileH2 font-semibold my-4 z-2">Archive</h2>
+        <h2 class="lg:text-desktopH2 md:text-4xl text-mobileH2 font-semibold my-4">Archive</h2>
         <div class="flex flex-row">
 
             <?php

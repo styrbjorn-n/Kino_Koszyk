@@ -9,9 +9,9 @@
 
     <article class="mt-8 h-fit flex flex-col md:flex-row md:gap-4">
         <div class="md:w-2/3">
-            <p class="font-text lg:text-desktopP md:text-tabletP"><?php the_field('front_page_description'); ?></p>
+            <p class="font-text text-mobileP lg:text-desktopP md:text-tabletP"><?php the_field('front_page_description'); ?></p>
         </div>
-        <img class="invisible md:visible w-full self-center md:w-1/3 md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk logo in black">
+        <img class="h-0 md:h-full w-full self-center md:w-1/3 md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk logo in black">
     </article>
 
     <article>
