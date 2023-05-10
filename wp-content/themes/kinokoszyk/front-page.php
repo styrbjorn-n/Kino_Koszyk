@@ -3,11 +3,11 @@
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <div class="w-full">
         <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 text-mobileH1 font-black relative z-1"><span class="text-red-600 mr-4 md:mr-8 lg:mr-8">KINO</span><span>KOSZYK</span></h1>
-        <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"> Documentary filmmakers </h2>
+        <h2 class="lg:text-desktopH2 md:text-tabletH2 text-mobileH4 font-semibold md:mb-4 lg:mb-4"> Documentary filmmakers </h2>
         <video autoplay loop muted class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/front-page.mp4"></video>
     </div>
 
-    <article class="mt-16 h-fit flex flex-col md:flex-row md:gap-4">
+    <article class="mt-4 md:mt-16 lg:mt-16 h-fit flex flex-col md:flex-row md:gap-4">
         <div class="max-w-[740px] mr-24">
             <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"><?php the_field('front_page_header') ?></h2>
             <p class="lg:text-desktopP md:text-xl font-text"><?php the_field('front_page_description'); ?></p>
