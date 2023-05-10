@@ -38,7 +38,5 @@
 
         </div>
     </article>
-
-
 </section>
 <?php get_footer(); ?>

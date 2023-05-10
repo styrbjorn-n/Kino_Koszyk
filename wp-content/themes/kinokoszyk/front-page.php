@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-    <div class="w-full">
+    <article class="w-full">
         <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 text-6xl leading-[48px] font-black relative z-1"><span class="text-red-600 mr-4 md:mr-8 lg:mr-8">KINO</span><span>KOSZYK</span></h1>
         <h2 class="font-text md:font-heading lg:text-desktopH2 md:text-tabletH2 text-mobileH4 font-semibold md:mb-4 lg:mb-4"> Documentary filmmakers </h2>
         <video autoplay loop muted class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/front-page.mp4"></video>
-    </div>
+    </article>
 
     <article class="flex flex-col md:flex-row mt-4 md:mt-16 md:mb-16 h-fit md:gap-4">
         <div class="md:w-2/3">
@@ -15,19 +15,16 @@
         <img class="h-0 md:h-full w-full self-center md:w-1/3 md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
 
-    <!-- ARCHIVE ITEM POST ON THE FRONT-PAGE.PHP -->
     <article>
         <h2 class="lg:text-desktopH2 md:text-4xl text-mobileH2 font-semibold my-4">Archive</h2>
         <div class="flex flex-row">
 
-            <?php
-            $args = array(
+            <?php $args = array(
                 'post_type' => 'custom-archive',
                 'posts_per_page' => 1,
                 'orderby' => 'date',
                 'order' => 'DESC',
             );
-
             $archive_item_query = new WP_Query($args);
 
             if ($archive_item_query->have_posts()) :
@@ -37,37 +34,24 @@
                         <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text max-w-[712px]"><b><?php the_field('archive_item_year'); ?></b></p>
                         <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= wp_trim_words(get_field('archive_item_paragraph'), 35); ?></p>
                         <a href="<?= get_post_type_archive_link('custom-archive'); ?>"><button class="mt-2 text-center bg-buttonRed px-2 h-8 w-flex-grow text-white font-text">Read more</button></a>
-
                     </div>
+
                     <div class="basis-1/2">
                         <?php
                         $image1 = get_field('archive_item_image_1');
                         if ($image1) :
-
-                            // Image variables.
-                            // $url = the_permalink();
                             $title = $image1['title'];
-                            $alt = $image1['title'];
-                            $caption = $image1['caption'];
-
-                            // Thumbnail size attributes.
+                            $alt = $image1['alt'];
                             $size = 'large';
-                            $thumb = $image1['sizes'][$size];
-                            $width = $image1['sizes'][$size . '-width'];
-                            $height = $image1['sizes'][$size . '-height']; ?>
+                            $thumb = $image1['sizes'][$size]; ?>
 
                             <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
-
-                <?php endif;
-                    endwhile;
-                    wp_reset_postdata();
-                endif;
-                ?>
+                        <?php endif; ?>
                     </div>
+            <?php endwhile;
+            endif; ?>
         </div>
     </article>
-
-
 
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
         <h3 class="mb-10 font-semibold text-desktopH2">Our partners</h3>
@@ -88,7 +72,6 @@
 
         </div>
     </article>
-
 </section>
 <?php wp_reset_postdata(); ?>
 
