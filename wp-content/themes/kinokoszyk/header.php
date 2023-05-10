@@ -41,7 +41,7 @@ $slug = get_last_url_slug();
                         </div>
                     </div>
                 </div>
-                <div id="nav-links" class="flex flex-col absolute items-start bg-white z-20 top-0 left-[-100%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
+                <div id="nav-links" class="flex flex-col absolute items-start bg-white z-20 top-0 left-[-120%] w-screen h-screen mt-12 duration-500 lg:z-0 lg:h-fit lg:static lg:mt-0 lg:flex-row lg:justify-between lg:justify-self-end lg:w-fit">
 
                     <div class="nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8">
                         <?php
@@ -57,18 +57,9 @@ $slug = get_last_url_slug();
 
                             <?php if ($kino_menu) foreach ($kino_menu as $link) : ?>
                                 <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink <?php active_menu_link($link->title, $segments) ?>" href="<?= $link->url; ?>"><?= $link->title; ?></a>
-                            <?php endforeach; ?>
+                        <?php endforeach;
+                        } ?>
                     </div>
-                <?
-
-                        }
-                        // wp_nav_menu(array(
-                        //     'theme_location' => $menu,
-                        //     'container' => false,
-                        //     'menu_class' => 'nav-menu-list flex flex-col items-start px-4 min-h-[45%] max-h-full justify-between font-bold lg:gap-1 lg:flex-row lg:justify-end lg:gap-8',
-                        //     'add_li_class' => 'hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink'
-                        // ));
-                ?>
                 </div>
                 <div onclick="onToggleMenu(this)" class="w-[30px] h-[30px] cursor-pointer lg:hidden z-20 lg:z-0">
                     <div id="line-container" class="w-full h-full space-y-2">
