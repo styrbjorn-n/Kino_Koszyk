@@ -80,7 +80,7 @@
                     ?>
                     <img class="object-fill w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                     <p class="mb-16 font-text text-desktopP max-w-[712px] lg:text-desktopH2 md:text-tabletH2 max-md:text-mobileH2 max-md:mt-4 lg:text-desktopH4 md:text-tabletH4 max-md:text-mobileH4 lg:text-desktopP md:text-tabletP max-md:text-mobileP sm:mt-2"><?php the_field('joanna_helander_description') ?></p>
-                    <a href="<?php echo get_page_link(1004); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Read more about Joanna</button></a>
+                    <a href="<?php echo get_page_link(1004); ?>"><button class="mt-2 text-center bg-buttonRed px-2 h-8 w-flex-grow text-white font-text">Read more about Joanna</button></a>
 
                 </div>
             </section>
