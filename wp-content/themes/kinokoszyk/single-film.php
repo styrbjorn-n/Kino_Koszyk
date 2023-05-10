@@ -22,9 +22,11 @@
                 $height = $headerImage['sizes'][$size . '-height']; ?>
                 <img class="object-cover w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
-            <?php if (get_field('trailer')) :
-                the_field('trailer');
-            endif; ?>
+            <div class="overflow-hidden">
+                <?php if (get_field('trailer')) :
+                    the_field('trailer');
+                endif; ?>
+            </div>
             <section class="mt-16 flex flex-row justify-between">
                 <div class="max-w-[490px]">
                     <h4 class="font-header text-desktopH4"><?php the_title(); ?></h4>
