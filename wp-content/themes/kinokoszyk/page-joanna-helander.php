@@ -2,7 +2,7 @@
 
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <div class="w-full">
-        <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 max-sm:text-mobileH1 sm:text-mobileH1 font-black relative z-1"> JOANNA HELANDER </h1>
+        <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 text-mobileH1 font-black relative z-1"> JOANNA HELANDER </h1>
         <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"><?php the_field('front_page_header') ?></h2>
         <img class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/page-joanna-helander.png" alt="">
     </div>
