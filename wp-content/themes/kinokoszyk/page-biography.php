@@ -41,23 +41,9 @@ $segments = get_url_segments(); ?>
             <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:text-mobileH4 font-bold mt-2"><?php the_field('biography_subheader') ?></h4>
             <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text mt-6 max-w-[712px]"><?php the_field('biography_paragraph') ?></p>
             <div class="flex flex-row gap-8 mt-4">
-                <a href="<?php the_field('biography_link_1'); ?>"><button class="text-center bg-buttonRed px-2 h-8 w-16 text-white font-text">Photos</button></a>
+                <a href="<?php the_field('biography_link_1'); ?>"><button class="text-center m-4 bg-buttonRed px-2 h-8 w-16 text-white font-text">Photos</button></a>
                 <a href="<?php the_field('biography_link_2'); ?>"><button class="text-center bg-buttonRed px-2 h-8 w-16 text-white font-text">Books</button></a>
             </div>
-        </div>
-        <div class="w-full h-full max-md:mt-4">
-            <?php
-            $image = get_field('biography_side_image');
-            if ($image) {
-
-                $title = $image['title'];
-                $alt = $image['alt'];
-
-                $size = 'large';
-                $thumb = $image['sizes'][$size];
-            };
-            ?>
-            <img class="object-fill w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
         </div>
     </section>
 </section>

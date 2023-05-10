@@ -25,7 +25,8 @@ if (in_array("joanna-helander", $segments)) {
 
                         <div class="lg:w-[32%] inline-block align-top overflow-hidden masonry-item md:w-[26.3%] mb-4 masonry-item">
                             <a href="<?php echo $image['url']; ?>" target="_blank" class="inset-0">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+                                <img class="w-full h-auto object-cover object-center" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+                                <!-- hover:scale-110 transition duration-500 ease-in-out ||||| classes they wanted gone -->
                             </a>
                         </div>
                     <?php endif; ?>

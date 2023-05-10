@@ -13,43 +13,9 @@
         </div>
     </article>
 
-
     <article>
-        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl text-mobileH2">Next Exhibition/latest exhibition</h2>
-        <div class="flex flex-row">
-
-            <?php
-            $args = array(
-                'post_type' => 'exhibitions',
-                'posts_per_page' => 1,
-                'orderby' => 'date',
-                'order' => 'DESC',
-            );
-
-            $exhibition_item_query = new WP_Query($args);
-
-            if ($exhibition_item_query->have_posts()) :
-                while ($exhibition_item_query->have_posts()) : $exhibition_item_query->the_post();
-            ?>
-                    <div class="flex flex-row">
-                        <div>
-                            <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
-                        </div>
-                        <div>
-
-                            <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_name'); ?></h4>
-                            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_location'); ?></p>
-
-                            <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
-                        </div>
-                    </div>
-
-            <?php
-                endwhile;
-                wp_reset_postdata();
-            endif; ?>
-        </div>
-        </div>
+        <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl text-mobileH2">Exhibitions</h2>
+        <a href="<?php the_field('joanna_exhibition_link'); ?>"><button class="text-center bg-buttonRed px-2 h-8 w-16 text-white font-text">Read more</button></a>
     </article>
 
     <article class="link-wrapper w-full h-fit flex flex-wrap my-16">

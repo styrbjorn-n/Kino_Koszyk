@@ -32,7 +32,7 @@
                     <!-- What's being showed -->
                     <div class="flex flex-col w-[48%] lg:w-[30%] font-text mb-16">
                         <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
-                            <img class="object-fill hover:border-2 aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                            <img class="object-fill shadow-book hover:border-2 aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                         </a>
                         <a class="font-bold text-mobileP lg:text-desktopP md:text-tabletP" href=<?php the_permalink() ?>> <?= the_title(); ?></a>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>

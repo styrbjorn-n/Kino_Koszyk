@@ -41,9 +41,9 @@
         </div>
     </section>
 
-    <section class="my-16 flex flex-row gap-4">
+    <section class="my-16 flex flex-row justify-between gap-4">
 
-        <div class="max-w-[1/4]">
+        <div class="">
             <?php
             $image = get_field('book_image_1');
             if ($image) :
@@ -53,7 +53,7 @@
                 <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
-        <div class="max-w-[1/4]">
+        <div class="">
 
             <?php
             $image = get_field('book_image_2');
@@ -64,7 +64,7 @@
                 <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
-        <div class="max-w-[1/4]">
+        <div class="">
 
             <?php
             $image = get_field('book_image_3');
@@ -75,7 +75,7 @@
                 <img class="  object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
         </div>
-        <div class="max-w-[1/4]">
+        <div class="">
 
             <?php
             $image = get_field('book_image_4');
@@ -85,6 +85,19 @@
                 $thumb = $image['sizes'][$size]; ?>
                 <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
             <?php endif; ?>
+
+        </div>
+        <div>
+            <div class="">
+                <?php
+                $image = get_field('book_image_5');
+                if ($image) :
+                    $alt = $image['alt'];
+                    $size = 'large';
+                    $thumb = $image['sizes'][$size]; ?>
+                    <img class=" object-cover " src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 </section>
