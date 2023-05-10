@@ -7,10 +7,10 @@
         <video autoplay loop muted class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/front-page.mp4"></video>
     </div>
 
-    <article class="mt-4 md:mt-16 lg:mt-16 h-fit flex flex-col md:flex-row md:gap-4">
-        <div class="max-w-[740px] mr-24">
-            <h2 class="lg:text-desktopH2 font-semibold mb-4 md:text-4xl"><?php the_field('front_page_header') ?></h2>
-            <p class="lg:text-desktopP md:text-xl font-text"><?php the_field('front_page_description'); ?></p>
+    <article class="flex flex-col md:flex-row mt-4 md:mt-16 h-fit md:gap-4">
+        <div class="md:mr-24">
+            <h2 class="font-heading font-semibold text-mobileH2 lg:text-desktopH2 md:text-tabletH2 mb-4"><?php the_field('front_page_header') ?></h2>
+            <p class="text-mobileP lg:text-desktopP md:text-tabletP font-text"><?php the_field('front_page_description'); ?></p>
         </div>
         <img class="w-full self-center md:w-1/2 hidden md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kinokoszyk logo in black">
     </article>
