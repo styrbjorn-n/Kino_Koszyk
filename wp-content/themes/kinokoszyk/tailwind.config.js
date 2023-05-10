@@ -13,7 +13,13 @@ tailwind.config = {
         text: ['Karla']
       },
       height: {
-        footer: '311px'
+        footer: '311px',
+        contactF1: '40px',
+        contactF2: '168px',
+        button: '44px'
+      },
+      width: {
+        button: '141px'
       },
       fontSize:{
         desktopH1: ['120px', '128px'],
@@ -38,7 +44,11 @@ tailwind.config = {
         mobileH3: ['25px', '28px'],
         mobileH4: ['20px', '24px'],
         mobileLink: ['14px', '150%'],
-        mobileP: ['16px', '150%']
+        mobileP: ['16px', '150%'],
+
+        desktopPlace: ['20px', '26px'],
+
+        button: ['24px', '28px']
       },
         textColor: {
           'primary': '#333333',
