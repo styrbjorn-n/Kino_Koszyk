@@ -11,11 +11,12 @@ $segments = get_url_segments();
             bcn_display();
         } ?>
     </div>
-    <!-- THIS IS NOT THE CORRECT STYLED MENU, ONLY FOR PLACE HOLDER -->
-    <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
+    <div class="primary-menu-list flex lg:text-desktopH2 md:text-tabletH2 sm:text-mobileH2 flex-row flex-wrap items-start h-full max-md:justify-center font-bold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
+        <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
 
-        <a title="<?= $link->title; ?>" class="hover:text-hover text-desktopH2 <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
-    <?php endforeach; ?>
+            <a title="<?= $link->title; ?>" class="hover:text-hover text-desktopH2 <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
+        <?php endforeach; ?>
+    </div>
 
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
         <div class="">
