@@ -42,8 +42,10 @@ $segments = get_url_segments();
             <h2 class="font-heading font-bold lg:text-desktopH2 md:text-tabletH2 max-md:text-mobileH2 mt-16 max-md:mt-4"><?php the_field('biography_header') ?></h2>
             <h4 class="font-text lg:text-desktopH4 md:text-tabletH4 max-md:text-mobileH4 font-bold mt-2"><?php the_field('biography_subheader') ?></h4>
             <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text mt-6 max-w-[712px]"><?php the_field('biography_paragraph') ?></p>
-            <a href="<?php the_field('biography_link_1'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Photos</button></a>
-            <a href="<?php the_field('biography_link_2'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Books</button></a>
+            <div class="flex flex-row gap-8">
+                <a href="<?php the_field('biography_link_1'); ?>"><button class="text-center bg-buttonRed px-2 h-8 w-16 text-white font-text">Photos</button></a>
+                <a href="<?php the_field('biography_link_2'); ?>"><button class="text-center bg-buttonRed px-2 h-8 w-16 text-white font-text">Books</button></a>
+            </div>
         </div>
         <div class="w-full h-full max-md:mt-4">
             <?php
