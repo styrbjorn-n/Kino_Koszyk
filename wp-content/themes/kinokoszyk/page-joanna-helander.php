@@ -9,10 +9,11 @@
         <img class="w-full aspect-video bg-gray-400 shrink-0 mt-0" src="<?= get_template_directory_uri(); ?>/src/page-joanna-helander.png" alt="Woman in industial area with wind in her hair">
     </div>
 
-    <article class="mt-16 h-fit flex flex-col md:flex-row md:gap-4">
-        <div class="max-w-[740px] mr-24">
-            <p class="font-text lg:text-desktopP font-text md:text-xl"><?php the_field('front_page_description'); ?></p>
+    <article class="mt-8 h-fit flex flex-col md:flex-row md:gap-4">
+        <div class="md:w-2/3">
+            <p class="font-text lg:text-desktopP md:text-tabletP"><?php the_field('front_page_description'); ?></p>
         </div>
+        <img class="invisible md:visible w-full self-center md:w-1/3 md:block" src="<?= get_template_directory_uri(); ?>/src/logoblack.svg" alt="Kino Koszyk logo in black">
     </article>
 
     <article>
