@@ -14,7 +14,7 @@
                     <p class="mb-16 font-text text-desktopP max-w-[712px] lg:text-desktopH2 md:text-tabletH2 max-md:text-mobileH2 max-md:mt-4 lg:text-desktopH4 md:text-tabletH4 max-md:text-mobileH4 lg:text-desktopP md:text-tabletP max-md:text-mobileP sm:mt-2"><?php the_field('kino_koszyk_description'); ?></p>
                 </div>
 
-                <div class="basis-[40%]">
+                <div class="hidden md:block md:basis-[40%]">
                     <div class="w-full h-full max-md:mt-4">
 
                         <?php $image = get_field('about_image_1');
