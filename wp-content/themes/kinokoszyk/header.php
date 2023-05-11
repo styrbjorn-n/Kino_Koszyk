@@ -33,7 +33,7 @@ $slug = get_last_url_slug();
                         <div class="primary-menux lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
                             <?php
                             if (in_array("joanna-helander", $segments)) {
-                                echo '<a  href="/" class="hover:text-hover text-mobileHeaderLink md:text-tabletH3 w-fit lg:text-desktopHeader">' . "Go to Kino Koszyk"  . '</a>';
+                                echo '<a  href="/" class="hover:text-hover text-mobileHeaderLink md:text-tabletH3 font-bold w-fit lg:text-desktopHeader">' . "Go to Kino Koszyk"  . '</a>';
                             } else {
                                 echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileHeaderLink md:text-tabletH3 font-bold w-fit lg:text-desktopHeader"> Go to Joanna Helander </a>';
                             }
