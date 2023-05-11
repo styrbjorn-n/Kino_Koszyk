@@ -16,12 +16,12 @@
 
     <article>
         <h2 class="lg:text-desktopH2 font-semibold my-4 md:text-4xl text-mobileH2">Exhibitions</h2>
-        <a href="<?php the_field('joanna_exhibition_link'); ?>"><button class="text-center m-4 bg-buttonRed px-2 h-8 w-16 text-white font-text">Read more</button></a>
+        <a href="<?php the_field('joanna_helander_link'); ?>"><button class="mt-2 text-center bg-buttonRed px-2 h-8 w-flex-grow text-white font-text">Read more</button class=""></a>
     </article>
 
-    <article class="link-wrapper w-full h-fit flex flex-wrap my-16">
+    <article class="link-wrapper w-full h-fit flex flex-col my-16">
         <h3 class="mb-10 font-semibold text-desktopH3">Partners</h3>
-        <div class="h-30 w-full flex flex-wrap md:justify-between">
+        <div class="h-30 w-full grid grid-cols-5 gap-4">
 
             <?php
             print_partner_items(1);
@@ -38,5 +38,7 @@
 
         </div>
     </article>
+
+
 </section>
 <?php get_footer(); ?>

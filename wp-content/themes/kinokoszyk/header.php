@@ -33,9 +33,9 @@ $slug = get_last_url_slug();
                         <div class="primary-menux w-full lg:w-fit z-30 bg-white lg:z-0 justify-self-stretch">
                             <?php
                             if (in_array("joanna-helander", $segments)) {
-                                echo '<a  href="/" class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopLink">' . "Go to Kino Koszyk"  . '</a>';
+                                echo '<a  href="/" class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopHeader">' . "Go to Kino Koszyk"  . '</a>';
                             } else {
-                                echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopLink"> Go to Joanna Helander </a>';
+                                echo '<a href=' . get_page_link(949) . ' class="hover:text-hover text-mobileHeaderLink md:text-tabletP w-fit lg:text-desktopHeader"> Go to Joanna Helander </a>';
                             }
                             ?>
                         </div>
@@ -49,14 +49,14 @@ $slug = get_last_url_slug();
                         ?>
                             <?php if ($joanna_menu) foreach ($joanna_menu as $link) : ?>
 
-                                <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
+                                <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopHeader <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
                             <?php endforeach; ?>
                         <?
                         } else {
                         ?>
 
                             <?php if ($kino_menu) foreach ($kino_menu as $link) : ?>
-                                <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopLink <?php active_menu_link($link->title, $segments) ?>" href="<?= $link->url; ?>"><?= $link->title; ?></a>
+                                <a title="<?= $link->title; ?>" class="hover:text-hover text-mobileMenu md:text-tabletMenu w-fit lg:text-desktopHeader <?php active_menu_link($link->title, $segments) ?>" href="<?= $link->url; ?>"><?= $link->title; ?></a>
                         <?php endforeach;
                         } ?>
                     </div>

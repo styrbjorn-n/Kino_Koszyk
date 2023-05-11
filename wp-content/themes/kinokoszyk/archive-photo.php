@@ -21,8 +21,8 @@ if (in_array("joanna-helander", $segments)) {
                     $image = get_field('photography');
                     if ($image) :
                         $title = $image['title'];
-                        $alt = $image['alt']; ?>
-
+                        $alt = $image['alt'];
+                        $caption = $image['caption']; ?>
                         <div class="lg:w-[32%] inline-block align-top overflow-hidden masonry-item md:w-[26.3%] mb-4 masonry-item">
                             <a href="<?php echo $image['url']; ?>" target="_blank" class="inset-0">
                                 <img class="w-full h-auto object-cover object-center" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
