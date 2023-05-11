@@ -5,7 +5,6 @@ $slug = get_last_url_slug(); ?>
         bcn_display();
     } ?>
 </div>
-
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16">PHOTOS</h1>
     <?php print_category_terms('photo-category', $slug); ?>
@@ -20,7 +19,7 @@ $slug = get_last_url_slug(); ?>
 
                         <div class="lg:w-[32%] inline-block align-top overflow-hidden masonry-item md:w-[26.3%] mb-4 masonry-item">
                             <a href="<?php echo $image['url']; ?>" target="_blank" class="inset-0">
-                                <img class="w-full h-auto object-cover object-center" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
                             </a>
                         </div>
                     <?php endif; ?>

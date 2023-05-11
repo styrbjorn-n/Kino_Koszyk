@@ -1,16 +1,16 @@
 <?php get_header();
-
 $slug = get_last_url_slug();
 $segments = get_url_segments();
+
 if (in_array("joanna-helander", $segments)) {
-}; ?>
+}
+?>
 
 <div class="flex relative mx-2 md:mx-16 lg:mx-[120px] breadcrumbs font-text font-thin uppercase text-grey lg:text-desktopLink md:text-tabletLink sm:text-mobileLink" typeof="BreadcrumbList" vocab="https://schema.org/">
     <?php if (function_exists('bcn_display')) {
         bcn_display();
     } ?>
 </div>
-
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <h1 class="font-black lg:text-desktopH1 md:text-tabletH1 text-mobileH1 mb-4 md:mb-16">PHOTOS</h1>
     <?php print_category_terms('photo-category', $slug); ?>
@@ -32,6 +32,7 @@ if (in_array("joanna-helander", $segments)) {
                     <?php endif; ?>
                 <?php endwhile; ?>
             <?php endif; ?>
+
         </div>
     </section>
 
@@ -44,9 +45,10 @@ if (in_array("joanna-helander", $segments)) {
             ?>
         </div>
     </section>
-    </div>
-</section>
 
+    </div>
+
+</section>
 <?php get_footer(); ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
