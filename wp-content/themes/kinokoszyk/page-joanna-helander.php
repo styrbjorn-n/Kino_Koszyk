@@ -4,7 +4,15 @@
     <div class="w-full">
         <h1 id="hero-title" class="flex flex-col font-black text- lg:flex-row lg:text-desktopH1 md:text-tabletH1 text-6xl relative z-1"><span class="font-heading uppercase mr-4 md:mr-8 lg:mr-8">Joanna</span><span class="uppercase">Helander</span></h1>
         <h2 class="font-text md:font-heading lg:text-desktopH2 md:text-tabletH2 text-mobileH4 font-semibold md:mb-4 lg:mb-4"><?php the_field('front_page_header') ?></h2>
-        <img class="w-full aspect-video bg-gray-400 shrink-0 mt-0" src="<?= get_template_directory_uri(); ?>/src/page-joanna-helander.png" alt="Woman in industial area with wind in her hair">
+        <?php $image = get_field('front_page_image');
+        if ($image) {
+            $title = $image['title'];
+            $alt = $image['alt'];
+            $size = 'large';
+            $thumb = $image['sizes'][$size];
+        }; ?>
+
+        <img class="w-full aspect-video bg-gray-400 shrink-0 mt-0" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
     </div>
 
     <article class="mt-8 h-fit flex flex-col md:flex-row md:gap-4">
