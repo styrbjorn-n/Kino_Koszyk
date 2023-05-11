@@ -15,41 +15,39 @@ $segments = get_url_segments(); ?>
 
         <div class="primary-menu-list flex flex-col lg:text-desktopH2 md:text-tabletH2 text-mobileH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-semibold lg:justify-start gap-x-10 [&>li:nth-child(2)>span]:hidden">
             <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
-
                 <a title="<?= $link->title; ?>" class="hover:text-hover <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= strtoupper($link->title); ?></a>
             <?php endforeach; ?>
         </div>
 
         <section class=" w-3/5 ">
-            <?php
-
-            $args = array(
+            <?php $args = array(
                 'post_type' => 'exhibitions',
                 'posts_per_page' => 12,
                 'orderby' => 'meta_value',
-                'meta_key' => 'exhibition_date',
+                'meta_key' => 'exhibition_year',
                 'order' => 'DESC',
                 'paged' => $paged,
                 'meta_query' => array(
                     array(
-                        'key' => 'exhibition_date',
+                        'key' => 'exhibition_year',
                         'compare' => 'EXISTS',
                     ),
                 ),
             );
-            $exhibitionQuery = new WP_Query($args);
+            $exhibition_query = new WP_Query($args);
 
-            $nextDisplayed = false;
-            $pastDisplayed = false;
-            while ($exhibitionQuery->have_posts()) : $exhibitionQuery->the_post();
-                if (strtotime(get_field('exhibition_date')) > strtotime(date('Fj,Y')) && !$nextDisplayed) :
-                    $nextDisplayed = true; ?>
+            $next_displayed = false;
+            $past_displayed = false;
+            while ($exhibition_query->have_posts()) : $exhibition_query->the_post();
+                if (!get_field('exhibition_is_past_event') && !$next_displayed) :
+                    $next_displayed = true; ?>
+
                     <h4 class="lg:text-desktopH4 font-text font-semibold mt-16 md:text-4xl">NEXT</h4>
                     <hr class="border-black mt-4 mb-16 border-2">
 
                     <article class="flex flex-row">
                         <div>
-                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_date'); ?></h4>
+                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
                         </div>
 
                         <div>
@@ -58,12 +56,10 @@ $segments = get_url_segments(); ?>
                             <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
                         </div>
                     </article>
-
-                <?php elseif (strtotime(get_field('exhibition_date')) > strtotime(date('Fj,Y')) && $nextDisplayed) : ?>
-
+                <?php elseif (!get_field('exhibition_is_past_event') && $next_displayed) : ?>
                     <article class="flex flex-row">
                         <div>
-                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_date'); ?></h4>
+                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
                         </div>
 
                         <div>
@@ -72,15 +68,15 @@ $segments = get_url_segments(); ?>
                             <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
                         </div>
                     </article>
+                <?php elseif (get_field('exhibition_is_past_event') && !$past_displayed) :
+                    $past_displayed = true; ?>
 
-                <?php elseif (strtotime(get_field('exhibition_date')) < strtotime(date('Fj,Y')) && !$pastDisplayed) :
-                    $pastDisplayed = true; ?>
-
-                    <h4 class="lg:text-desktopH4 font-text font-semibold mt-28 md:text-4xl">PAST</h4>
+                    <h4 class="lg:text-desktopH4 font-text font-semibold mt-16 md:text-4xl">PAST</h4>
                     <hr class="border-black mt-4 mb-16 border-2">
+
                     <article class="flex flex-row">
                         <div>
-                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_date'); ?></h4>
+                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
                         </div>
 
                         <div>
@@ -89,11 +85,10 @@ $segments = get_url_segments(); ?>
                             <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= get_field('exhibition_description'); ?></p>
                         </div>
                     </article>
-
-                <?php elseif (strtotime(get_field('exhibition_date')) < strtotime(date('Fj,Y')) && $pastDisplayed) : ?>
+                <?php elseif (get_field('exhibition_is_past_event') && $past_displayed) : ?>
                     <article class="flex flex-row">
                         <div>
-                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_date'); ?></h4>
+                            <h4 class="font-text lg:mr-28 lg:text-desktopH4 md:text-tabletH4 max-md:mobileH4 font-bold"><?= get_field('exhibition_year'); ?></h4>
                         </div>
 
                         <div>
