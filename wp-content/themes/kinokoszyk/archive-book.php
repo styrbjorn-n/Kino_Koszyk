@@ -6,9 +6,9 @@
             bcn_display();
         } ?>
     </div>
+
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
         <h1 class="mt-0 uppercase font-black lg:mb-16 lg:text-desktopH1 md:text-tabletH1 text-mobileH1"><?php post_type_archive_title(); ?></h1>
-
         <div class="w-full flex flex-wrap justify-start lg:gap-14 gap-1">
             <?php while (have_posts()) : the_post(); ?>
 
@@ -16,13 +16,12 @@
                 if ($image) :
                     $title = $image['title'];
                     $alt = $image['alt'];
-                    $caption = $image['caption'];
                     $size = 'large';
                     $thumb = $image['sizes'][$size]; ?>
 
                     <div class="flex flex-col w-[48%] lg:w-[30%] font-text mb-16">
                         <a href="<?php the_permalink(); ?>" title="<?= esc_attr($title); ?>">
-                            <img class="object-fill shadow-book hover:border-2 aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                            <img class="object-fill shadow-book hover:shadow-none transition duration-500 ease-in-out aspect-[8/12] w-full" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                         </a>
                         <a class="font-bold text-mobileP lg:text-desktopP md:text-tabletP" href=<?php the_permalink() ?>> <?= the_title(); ?></a>
                         <p class="text-mobileP lg:text-desktopP md:text-tabletP"><?= get_field('year'); ?></p>
@@ -30,13 +29,13 @@
                 <?php endif; ?>
             <?php endwhile; ?>
         </div>
+
         <section class="font-text flex text-desktopP flex-row justify-center">
             <div class="mx-2 mt-2 mb-28 ">
                 <?php echo the_pagination(array(
                     'prev_text'    => ' < ',
                     'next_text'    => ' > '
-                ));
-                ?>
+                )); ?>
             </div>
         </section>
     <?php endif; ?>
