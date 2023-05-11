@@ -2,7 +2,7 @@
 
 <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
     <article class="w-full">
-        <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 text-6xl leading-[48px] font-black relative z-1"><span class="text-red-600 mr-4 md:mr-8 lg:mr-8">KINO</span><span>KOSZYK</span></h1>
+        <h1 id="hero-title" class="lg:text-desktopH1 md:text-tabletH1 text-mobileClamp leading-[48px] font-black relative z-1"><span class="text-red-600 mr-4 md:mr-8 lg:mr-8">KINO</span><span>KOSZYK</span></h1>
         <h2 class="font-text md:font-heading lg:text-desktopH2 md:text-tabletH2 text-mobileH4 font-semibold md:mb-4 lg:mb-4"> Documentary filmmakers </h2>
         <video autoplay loop muted class="w-full aspect-video bg-gray-400 shrink-0" src="<?= get_template_directory_uri(); ?>/src/front-page.mp4"></video>
     </article>
