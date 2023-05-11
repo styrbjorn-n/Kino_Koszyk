@@ -33,13 +33,13 @@
                     <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text max-w-[712px]"><b><?php the_field('archive_item_year'); ?></b></p>
                 </div>
 
-                <div class="lg:mt-8 flex flex-row w-full max-h-[400px]">
+                <div class="lg:mt-8 flex justify-between flex-row w-full max-h-[400px]">
                     <div class="basis-1/2 flex flex-col justify-between">
                         <p class="lg:text-desktopP md:text-tabletP max-md:text-mobileP font-text  max-w-[712px]"><?= wp_trim_words(get_field('archive_item_paragraph'), 35); ?></p>
                         <a href="<?= get_post_type_archive_link('custom-archive'); ?>"><button class="mt-2 text-center bg-buttonRed px-2 h-8 w-flex-grow text-white font-text">Read more</button></a>
                     </div>
 
-                    <div class="basis-1/2 mr-0">
+                    <div class="">
                         <?php
                         $image1 = get_field('archive_item_image_1');
                         if ($image1) :
@@ -48,7 +48,7 @@
                             $size = 'large';
                             $thumb = $image1['sizes'][$size]; ?>
 
-                            <img class="object-cover w-fit h-full aspect-auto" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
+                            <img class="w-full h-full aspect-auto" src="<?= esc_url($thumb); ?>" alt="<?= esc_attr($alt);  ?>" />
                         <?php endif; ?>
                     </div>
                 </div>

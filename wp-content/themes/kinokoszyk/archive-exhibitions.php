@@ -10,12 +10,15 @@ $segments = get_url_segments(); ?>
                 bcn_display();
             } ?>
         </div>
-        <div class="primary-menu-list flex flex-col lg:text-desktopH2 md:text-tabletH2 text-mobileH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-semibold lg:justify-start [&>li:nth-child(2)>span]:hidden">
+
+        <div class="primary-menu-list flex flex-col lg:text-desktopH2 md:text-tabletH2 text-mobileH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-semibold lg:justify-start gap-x-10 [&>li:nth-child(2)>span]:hidden">
             <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
 
-                <a title="<?= $link->title; ?>" class="hover:text-hover text-desktopH2 <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= $link->title; ?></a>
+                <a title="<?= $link->title; ?>" class="hover:text-hover <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= strtoupper($link->title); ?></a>
             <?php endforeach; ?>
         </div>
+
+
         <section class=" w-3/5 ">
             <?php while (have_posts()) : the_post(); ?>
                 <?php if (strtotime(get_field('exhibition_date')) > strtotime(date('Fj,Y'))) : ?>

@@ -11,7 +11,8 @@ $segments = get_url_segments();
             bcn_display();
         } ?>
     </div>
-    <div class="primary-menu-list flex flex-col text-mobileH2 md:text-tabletH2 lg:text-desktopH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-semibold lg:justify-start gap-4 [&>li:nth-child(2)>span]:hidden">
+
+    <div class="primary-menu-list flex flex-col lg:text-desktopH2 md:text-tabletH2 text-mobileH2 md:flex-row flex-wrap items-start h-full max-md:justify-center font-semibold lg:justify-start gap-x-10 [&>li:nth-child(2)>span]:hidden">
         <?php if ($joanna_sub_menu) foreach ($joanna_sub_menu as $link) : ?>
 
             <a title="<?= $link->title; ?>" class="hover:text-hover <?php active_menu_link($link->title, $segments) ?> " href="<?= $link->url; ?>"><?= strtoupper($link->title); ?></a>
@@ -19,13 +20,12 @@ $segments = get_url_segments();
     </div>
 
     <section class="font-heading mx-2 md:mx-16 lg:mx-[120px]">
-        <div class="">
+        <div>
             <?php while (have_posts()) : the_post(); ?>
                 <h2><?= the_title(); ?></h2>
                 <h3><?= get_field('press_item_year'); ?></h3>
                 <h3><?= get_field('press_item_description'); ?></h3>
-                <a href="<?= the_field('press_item_link'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Read here </button class=""></a>
-                <!-- press LINK -->
+                <a href="<?= the_field('press_item_link'); ?>"><button class="bg-buttonRed px-2 h-11 text-white">Read here </button></a>
             <?php endwhile; ?>
         </div>
 
