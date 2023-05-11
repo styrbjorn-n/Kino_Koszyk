@@ -226,7 +226,26 @@ function custom_post_type_pagination($query)
         $query->set('posts_per_page', 6);
     }
 }
+
 add_action('pre_get_posts', 'custom_post_type_pagination');
+
+function custom_sort_by_date($query)
+{
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('exhibitions')) {
+
+        $query->set('posts_per_page', 12);
+
+        if (get_query_var('paged')) {
+            $paged = get_query_var('paged');
+        } elseif (get_query_var('page')) {
+            $paged = get_query_var('page');
+        } else {
+            $paged = 1;
+        }
+        $query->set('paged', $paged);
+    }
+}
+add_action('pre_get_posts', 'custom_sort_by_date');
 
 function load_js()
 {
